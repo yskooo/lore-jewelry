@@ -1,4 +1,14 @@
-export const rings = [
+export interface JewelryItem {
+  id?: string;
+  name: string;
+  details?: string;
+  material?: string;
+  price?: number | string | null;
+  image: string;
+  url?: string;
+}
+
+export const rings: JewelryItem[] = [
   {
     name: "Emery Silver Moissanite",
     details:
@@ -459,7 +469,7 @@ export const newArrivals = [
   },
 ];
 
-export const earrings = [
+export const earrings: JewelryItem[] = [
   {
     name: "Flower Pearl Moissanite Earrings",
     details: "0.01 CT VVS 1 Color Grade D, White Gold 18K Plated",

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Bestsellers } from "@/components/Bestsellers";
@@ -12,7 +13,9 @@ export default function Home() {
     <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-gray-200">
       <Header />
       <Hero />
-      <Bestsellers />
+      <Suspense fallback={<div className="py-20" />}>
+        <Bestsellers />
+      </Suspense>
       <hr className="border-t border-gray-200 mx-20" />
       <ServicesInfo />
       <LatestNews />
