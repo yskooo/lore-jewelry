@@ -39,7 +39,7 @@ export function Bestsellers() {
   const handleTabChange = (tab: string) => {
     setSelectedTab(tab);
     setCurrentPage(1);
-    
+
     // Update the URL so it reflects the selected tab
     const params = new URLSearchParams(searchParams?.toString() ?? "");
     if (tab === "All") {

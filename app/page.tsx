@@ -4,7 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Bestsellers } from "@/components/Bestsellers";
 import { ServicesInfo } from "@/components/ServicesInfo";
 import { LatestNews } from "@/components/LatestNews";
-import { SearchCategories } from "@/components/SearchCategories";
+// import { SearchCategories } from "@/components/SearchCategories";
 import { PopularCollections } from "@/components/PopularCollections";
 import { FooterSections } from "@/components/FooterSections";
 

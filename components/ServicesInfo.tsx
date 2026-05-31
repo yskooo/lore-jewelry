@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import { Cinzel, Raleway } from "next/font/google";
 import Image from "next/image";
 
@@ -12,7 +14,21 @@ const raleway = Raleway({
   weight: ["400", "500", "600", "700"]
 });
 
+const images = [
+  "https://down-aka-my.img.susercontent.com/my-11134210-23020-xb825b13ohnv18.webp",
+  "https://down-aka-my.img.susercontent.com/my-11134210-23020-dwl45b13ohnv3d.webp",
+  "https://down-aka-my.img.susercontent.com/my-11134210-23020-xe825b13ohnv0b.webp"
+];
+
 export function ServicesInfo() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <section className="bg-white py-24 w-full">
       <div className="max-w-[1400px] mx-auto px-4">
@@ -102,15 +118,34 @@ export function ServicesInfo() {
               </button>
             </div>
           </div>
-          {/* Left Side - Image and Background */}
-          <div className="relative h-96 md:h-[500px] bg-gradient-to-br from-[#e6e2dd]/60 to-[#f5f1ed]  overflow-hidden flex items-center justify-center">
-            <Image
-              src="/images/best-seller/my-11134207-7qul4-livbuo87wz1f2c.jpg"
-              alt="Our Services"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+          {/* Left Side - Image and Background (Now a Carousel) */}
+          <div className="relative h-96 md:h-[500px] bg-gradient-to-br from-[#e6e2dd]/60 to-[#f5f1ed] overflow-hidden rounded-2xl flex items-center justify-center p-4">
+            {images.map((imgSrc, index) => (
+              <img
+                key={index}
+                src={imgSrc}
+                alt={`Service Slide ${index + 1}`}
+                className={`absolute inset-4 max-w-[calc(100%-2rem)] max-h-[calc(100%-4rem)] m-auto object-contain transition-opacity duration-1000 rounded-xl ${
+                  index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              />
+            ))}
+
+            {/* Slider dots */}
+            <div className="absolute bottom-6 flex space-x-3 z-20 w-full justify-center">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                    index === currentSlide
+                      ? "bg-black"
+                      : "bg-black/30 hover:bg-black/60"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                ></button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

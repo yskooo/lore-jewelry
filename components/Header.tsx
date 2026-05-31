@@ -14,8 +14,7 @@ export function Header() {
   const navItems = [
     { label: "Cincin", href: "/?tab=Cincin#bestsellers" },
     { label: "Rubang", href: "/?tab=Rubang#bestsellers" },
-    { label: "Our Story", href: "#story" }
-    // { label: "Find Shops", href: "#shops" },
+    { label: "About", href: "/about" }
   ];
 
   return (
