@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { earrings, rings } from "../data/products";
 import Image from "next/image";
 import { cinzel, raleway } from "../utils/fonts";
@@ -10,6 +10,8 @@ const ITEMS_PER_PAGE = 6;
 export function Bestsellers() {
   const tabs = ["All", "Cincin", "Rubang"];
   const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
   const tabParam = searchParams?.get("tab") ?? "";
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,24 +32,33 @@ export function Bestsellers() {
   const paginatedItems = hasPagination
     ? displayedItems.slice(
         (currentPage - 1) * ITEMS_PER_PAGE,
-        currentPage * ITEMS_PER_PAGE,
+        currentPage * ITEMS_PER_PAGE
       )
     : displayedItems;
 
   const handleTabChange = (tab: string) => {
     setSelectedTab(tab);
     setCurrentPage(1);
+    
+    // Update the URL so it reflects the selected tab
+    const params = new URLSearchParams(searchParams?.toString() ?? "");
+    if (tab === "All") {
+      params.delete("tab");
+    } else {
+      params.set("tab", tab);
+    }
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   return (
     <section id="bestsellers" className="pt-20 pb-14 bg-white">
-      <div className="max-w-275 mx-auto px-4">
+      <div className="container mx-auto px-4">
         {/* Tabs */}
-        <div className="flex justify-around space-x-6 border-b border-gray-200 mb-10 whitespace-nowrap">
+        <div className="flex justify-around space-x-6  border-b border-gray-200 mb-10 whitespace-nowrap">
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`${cinzel.className} pb-4 text-[12px] md:text-sm font-semibold tracking-wide relative px-2 ${
+              className={`${cinzel.className} cursor-pointer  pb-4 text-[12px] md:text-sm font-semibold tracking-wide relative px-2 ${
                 activeTab === tab
                   ? "text-black"
                   : "text-gray-400 hover:text-gray-600"
@@ -83,7 +94,7 @@ export function Bestsellers() {
                 rel="noopener noreferrer"
                 className="flex flex-col items-center group cursor-pointer relative"
               >
-                <div className="w-full aspect-3/4 mb-6 relative overflow-hidden">
+                <div className="w-full aspect-square mb-6 relative overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.name}
@@ -165,8 +176,7 @@ export function Bestsellers() {
               document
                 .getElementById("bestsellers")
                 ?.scrollIntoView({ behavior: "smooth" });
-              setSelectedTab("All");
-              setCurrentPage(1);
+              handleTabChange("All");
             }}
           >
             See Bestseller Ranking

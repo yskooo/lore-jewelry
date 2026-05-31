@@ -1,6 +1,7 @@
 "use client";
 import { Heart, Search, Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import React, { useState } from "react";
 import { cinzel, raleway } from "../utils/fonts";
 export function Header() {
@@ -11,23 +12,27 @@ export function Header() {
   };
 
   const navItems = [
-    { label: "Rings", href: "/?tab=Cincin#bestsellers" },
-    //{ label: "Necklaces", href: "#" },
-    { label: "Earrings", href: "/?tab=Rubang#bestsellers" },
-    { label: "Services", href: "#services" },
-    { label: "Find Shops", href: "#shops" },
+    { label: "Cincin", href: "/?tab=Cincin#bestsellers" },
+    { label: "Rubang", href: "/?tab=Rubang#bestsellers" },
+    { label: "Our Story", href: "#story" }
+    // { label: "Find Shops", href: "#shops" },
   ];
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-        <div
-          className={`text-xl md:text-2xl font-bold tracking-[0.2em] text-gray-900 shrink-0 cursor-pointer ${cinzel.className}`}
-        >
-          Lore
-        </div>
+      <div className=" container mx-auto px-4 h-24 md:h-28 flex items-center justify-between">
+        <Link href="/" className="shrink-0 cursor-pointer">
+          <Image
+            src="/lore-jewelry-logo.jpeg"
+            alt="Lore Jewelry Logo"
+            width={240}
+            height={120}
+            className="object-contain h-20 md:h-28 w-auto mix-blend-multiply"
+            priority
+          />
+        </Link>
 
-        <nav className="hidden md:flex flex-1 justify-center space-x-16 uppercase">
+        <nav className="hidden md:flex flex-1 justify-center space-x-16 ">
           {navItems.map((item) => (
             <Link
               key={item.label}

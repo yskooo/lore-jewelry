@@ -6,37 +6,37 @@ export function LatestNews() {
       id: 1,
       title: "Mother of Moissanite",
       img: "/images/best-seller/nebula-ring-mossainite.webp",
-      text: "Nebula Moissanite Ring",
+      text: "Nebula Moissanite Ring"
     },
     {
       id: 2,
       title: "K-STYLE",
       img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=400&q=80",
-      text: "K-STYLE",
+      text: "K-STYLE"
     },
     {
       id: 3,
       title: "GRA",
       img: "/images/best-seller/my-11134207-7qul4-livbuo87wz1f2c.jpg",
-      text: "GRA",
+      text: "GRA"
     },
     {
       id: 4,
       title: "SWAN",
       img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=400&q=80",
-      text: "SWAN",
+      text: "SWAN"
     },
     {
       id: 5,
       title: "NEW",
       img: "/images/best-seller/image-Photoroom.webp",
-      text: "NEW",
-    },
+      text: "NEW"
+    }
   ];
 
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-[1100px] mx-auto px-4">
+      <div className="container mx-auto px-4">
         <h2 className="text-center text-2xl font-normal tracking-wide mb-14 text-gray-900">
           Latest News
         </h2>

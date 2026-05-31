@@ -19,7 +19,7 @@ export default function Home() {
       <hr className="border-t border-gray-200 mx-20" />
       <ServicesInfo />
       <LatestNews />
-      <SearchCategories />
+      {/* <SearchCategories /> */}
       <PopularCollections />
       <FooterSections />
     </div>

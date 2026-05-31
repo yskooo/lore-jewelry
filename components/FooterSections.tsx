@@ -5,7 +5,7 @@ export function FooterSections() {
     <>
       {/* Information Row */}
       <section className="pt-24 pb-32 ">
-        <div className="max-w-[1280px] mx-auto px-4 flex flex-col lg:flex-row gap-8 lg:gap-16">
+        <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-8 lg:gap-16">
           <div className="lg:w-1/5 shrink-0 flex flex-row lg:flex-col justify-between items-start">
             <h3 className="text-xl font-normal mb-4 tracking-wide text-gray-900">
               Information
@@ -22,19 +22,19 @@ export function FooterSections() {
               {
                 date: "2026.05.28 | Latest Information",
                 title: "LORE JEWELRY Kuala Lumpur Jun 12, 2026 Fri. New Open!",
-                img: "https://images.unsplash.com/photo-1605100804763-247f66156ce4?auto=format&fit=crop&w=400&q=80",
+                img: "/lore-jewelry-logo.jpeg"
               },
               {
                 date: "2026.05.15 | Press Release",
                 title: "Announcement on Moissanite Product Line Quality",
-                outline: true,
+                outline: true
               },
               {
                 date: "2026.04.11 | Press Release",
                 title:
                   "LORE REVAMPS BRAND IDENTITY, DEBUTING NEW RETAIL DESIGN IN MALAYSIA",
-                outline: true,
-              },
+                outline: true
+              }
             ].map((item, i) => (
               <div key={i} className="flex flex-col group cursor-pointer">
                 <div className="aspect-[16/10] bg-[#bebebe] mb-4 overflow-hidden flex items-center justify-center relative">
@@ -71,24 +71,23 @@ export function FooterSections() {
 
       {/* Map / Shops Section */}
       <section className="bg-white relative flex justify-center mt-20 mb-32">
-        {/* World Map Background image mockup */}
         <div className="absolute inset-0 pointer-events-none flex items-center justify-center top-[-100px]">
           <img
-            src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80&sat=-100&bri=50"
+            src="https://static.vecteezy.com/system/resources/previews/001/198/050/non_2x/dotted-world-map-png.png"
             alt="World Map"
             className="w-[1100px] object-contain opacity-10"
           />
         </div>
 
-        <div className="w-[600px] relative z-10 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
-          <div className="p-12 md:p-16 flex flex-col justify-center">
+        <div className="w-[90%] max-w-[600px] relative z-10 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
+          <div className="p-6 md:p-16 flex flex-col justify-center">
             <h3 className="text-2xl font-normal mb-8 tracking-wide">Shops</h3>
             <p className="text-sm text-gray-600 mb-10 leading-relaxed max-w-[400px]">
               With physical locations in Malaysia, LORE is committed to bringing
               the best ethical jewelry to customers around the world.
             </p>
-            <div className="flex border border-gray-300 mb-4 h-12">
-              <div className="flex items-center px-4 text-gray-400">
+            <div className="flex border border-gray-300 mb-4 h-12 overflow-hidden">
+              <div className="flex items-center px-2 md:px-4 text-gray-400">
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -105,10 +104,10 @@ export function FooterSections() {
               </div>
               <input
                 type="text"
-                placeholder="Search by keyword"
-                className="flex-1 px-2 text-sm outline-none placeholder-gray-400 font-medium"
+                placeholder="Search"
+                className="flex-1 w-0 px-2 text-sm outline-none placeholder-gray-400 font-medium"
               />
-              <button className="bg-[#2b2b2b] text-white px-8 text-sm font-bold tracking-wider hover:bg-black transition-colors">
+              <button className="bg-[#2b2b2b] text-white px-4 md:px-8 text-sm font-bold tracking-wider hover:bg-black transition-colors shrink-0">
                 Search
               </button>
             </div>
@@ -120,7 +119,7 @@ export function FooterSections() {
       </section>
 
       {/* EYE CAMP (CSR) */}
-      <section className="relative h-[480px] flex items-center overflow-hidden">
+      {/* <section className="relative h-[480px] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80"
           alt="CSR Eye Camp"
@@ -151,11 +150,10 @@ export function FooterSections() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Instagram 
-      <section className="py-24 bg-white">
-        <div className="max-w-[1280px] mx-auto">
+      {/* <section className="py-24 bg-white">
+        <div className="container mx-auto">
           <h2 className="text-center text-xl font-normal tracking-wide mb-4">Instagram</h2>
           <div className="text-center mb-12">
             <a href="#" className="text-[#0095f6] text-[11px] font-bold uppercase tracking-widest hover:underline">#LOREJEWELRY</a>
@@ -169,11 +167,11 @@ export function FooterSections() {
              ))}
           </div>
         </div>
-      </section>*/}
+      </section> */}
 
       {/* Footer Nav */}
       <footer className="bg-[#f2f2f2] pt-20 pb-16">
-        <div className="max-w-[1100px] mx-auto px-4">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-6 gap-y-12 mb-20 text-sm">
             <div>
               <h4 className="text-sm font-bold uppercase tracking-[0.15em] mb-5 text-gray-900">
@@ -182,17 +180,12 @@ export function FooterSections() {
               <ul className="space-y-4 text-gray-500">
                 <li>
                   <a href="#" className="hover:text-black">
-                    Rings
+                    Cincin
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-black">
-                    Necklaces
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-black">
-                    Earrings
+                    Rubang
                   </a>
                 </li>
               </ul>
@@ -258,7 +251,7 @@ export function FooterSections() {
                 </li>
               </ul>
             </div>
-            <div className="lg:col-span-2">
+            <div className="col-span-2 lg:col-span-2 mt-4 lg:mt-0">
               <h4 className="text-sm font-bold uppercase tracking-[0.15em] mb-5 text-gray-900">
                 CONTACT US
               </h4>
@@ -299,10 +292,10 @@ export function FooterSections() {
               <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">
                 COPYRIGHT (C) LORE JEWELRY co., ltd. ALL RIGHTS RESERVED.
               </p>
-              <div className="flex items-center text-sm text-gray-600 font-medium">
+              <div className="flex flex-col md:flex-row items-start md:items-center text-sm text-gray-600 font-medium">
                 <span>Philippine</span>
-                <span className="mx-2 text-gray-300">|</span>
-                <span>English</span>
+                <span className="hidden md:inline mx-2 text-gray-300">|</span>
+                <span className="mt-1 md:mt-0">English</span>
               </div>
             </div>
           </div>
