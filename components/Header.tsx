@@ -12,8 +12,8 @@ export function Header() {
   };
 
   const navItems = [
-    { label: "Cincin", href: "/?tab=Cincin#bestsellers" },
-    { label: "Rubang", href: "/?tab=Rubang#bestsellers" },
+    { label: "Ring", href: "/?tab=Ring#bestsellers" },
+    { label: "Earrings", href: "/?tab=Earrings#bestsellers" },
     { label: "About", href: "/about" }
   ];
 

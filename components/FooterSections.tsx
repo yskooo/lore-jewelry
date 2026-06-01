@@ -180,12 +180,12 @@ export function FooterSections() {
               <ul className="space-y-4 text-gray-500">
                 <li>
                   <a href="#" className="hover:text-black">
-                    Cincin
+                    Ring
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-black">
-                    Rubang
+                    Earring
                   </a>
                 </li>
               </ul>

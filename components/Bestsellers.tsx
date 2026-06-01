@@ -8,7 +8,7 @@ import { cinzel, raleway } from "../utils/fonts";
 const ITEMS_PER_PAGE = 6;
 
 export function Bestsellers() {
-  const tabs = ["All", "Cincin", "Rubang"];
+  const tabs = ["All", "Ring", "Earrings"];
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -19,13 +19,13 @@ export function Bestsellers() {
 
   const allItems = [...rings, ...earrings];
   const displayedItems =
-    activeTab === "Rubang"
+    activeTab === "Earrings"
       ? earrings
-      : activeTab === "Cincin"
+      : activeTab === "Ring"
         ? rings
         : allItems;
 
-  const hasPagination = activeTab !== "Rubang";
+  const hasPagination = activeTab !== "Earrings";
   const totalPages = hasPagination
     ? Math.ceil(displayedItems.length / ITEMS_PER_PAGE)
     : 1;
