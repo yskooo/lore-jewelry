@@ -1,11 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { earrings, rings } from "../data/products";
 import Image from "next/image";
 import { cinzel, raleway } from "../utils/fonts";
 
 const ITEMS_PER_PAGE = 6;
+
+const getNumericPrice = (price?: number | string | null) => {
+  if (typeof price === "number") return price;
+  if (!price) return 0;
+  const numeric = Number(price.toString().replace(/[^0-9.-]+/g, ""));
+  return Number.isFinite(numeric) ? numeric : 0;
+};
 
 export function Bestsellers() {
   const tabs = ["All", "Ring", "Earrings"];
@@ -14,6 +21,9 @@ export function Bestsellers() {
   const pathname = usePathname();
   const tabParam = searchParams?.get("tab") ?? "";
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
+  const [sortOrder, setSortOrder] = useState<
+    "default" | "lowToHigh" | "highToLow"
+  >("default");
   const [currentPage, setCurrentPage] = useState(1);
   const activeTab = tabs.includes(tabParam) ? tabParam : selectedTab;
 
@@ -24,17 +34,31 @@ export function Bestsellers() {
       : activeTab === "Ring"
         ? rings
         : allItems;
+  const sortedItems = useMemo(() => {
+    const items = [...displayedItems];
+    if (sortOrder === "lowToHigh") {
+      return items.sort(
+        (a, b) => getNumericPrice(a.price) - getNumericPrice(b.price)
+      );
+    }
+    if (sortOrder === "highToLow") {
+      return items.sort(
+        (a, b) => getNumericPrice(b.price) - getNumericPrice(a.price)
+      );
+    }
+    return items;
+  }, [displayedItems, sortOrder]);
 
   const hasPagination = activeTab !== "Earrings";
   const totalPages = hasPagination
-    ? Math.ceil(displayedItems.length / ITEMS_PER_PAGE)
+    ? Math.ceil(sortedItems.length / ITEMS_PER_PAGE)
     : 1;
   const paginatedItems = hasPagination
-    ? displayedItems.slice(
+    ? sortedItems.slice(
         (currentPage - 1) * ITEMS_PER_PAGE,
         currentPage * ITEMS_PER_PAGE
       )
-    : displayedItems;
+    : sortedItems;
 
   const handleTabChange = (tab: string) => {
     setSelectedTab(tab);
@@ -54,11 +78,11 @@ export function Bestsellers() {
     <section id="bestsellers" className="pt-20 pb-14 bg-white">
       <div className="container mx-auto px-4">
         {/* Tabs */}
-        <div className="flex justify-around space-x-6  border-b border-gray-200 mb-10 whitespace-nowrap">
+        <div className="flex justify-around space-x-6 border-b border-gray-200 mb-4 whitespace-nowrap">
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`${cinzel.className} cursor-pointer  pb-4 text-[12px] md:text-sm font-semibold tracking-wide relative px-2 ${
+              className={`${cinzel.className} cursor-pointer pb-4 text-[12px] md:text-sm font-semibold tracking-wide relative px-2 ${
                 activeTab === tab
                   ? "text-black"
                   : "text-gray-400 hover:text-gray-600"
@@ -71,6 +95,47 @@ export function Bestsellers() {
               )}
             </button>
           ))}
+        </div>
+
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end mb-8">
+          <div>
+            <p className="text-xs uppercase tracking-[0.4em] text-gray-500">
+              Sort by
+            </p>
+          </div>
+
+          <div className="relative w-full sm:w-auto">
+            <select
+              id="price-sort"
+              value={sortOrder}
+              onChange={(event) => {
+                setSortOrder(
+                  event.target.value as "default" | "lowToHigh" | "highToLow"
+                );
+                setCurrentPage(1);
+              }}
+              className="w-full appearance-none outline-none py-2 px-2 border border-gray-300 bg-white  pr-10 text-xs font-medium uppercase tracking-[0.25em] text-gray-700 transition duration-200 ease-out "
+            >
+              <option value="default">Default</option>
+              <option value="lowToHigh">Price: low to high</option>
+              <option value="highToLow">Price: high to low</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-gray-500"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </div>
+          </div>
         </div>
 
         {/* Products Grid */}
@@ -104,10 +169,7 @@ export function Bestsellers() {
                   />
                 </div>
 
-                <div className="text-center mt-auto w-full space-y-3">
-                  <p className="text-xs text-gray-400 tracking-widest uppercase font-medium">
-                    {materialLabel}
-                  </p>
+                <div className="text-center mt-auto mb-7 w-full space-y-2">
                   <h3
                     className={`${raleway.className} text-sm font-medium uppercase tracking-widest text-gray-800`}
                   >
