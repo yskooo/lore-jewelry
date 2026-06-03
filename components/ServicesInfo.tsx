@@ -15,9 +15,9 @@ const raleway = Raleway({
 });
 
 const images = [
-  "https://down-aka-my.img.susercontent.com/my-11134210-23020-xb825b13ohnv18.webp",
-  "https://down-aka-my.img.susercontent.com/my-11134210-23020-dwl45b13ohnv3d.webp",
-  "https://down-aka-my.img.susercontent.com/my-11134210-23020-xe825b13ohnv0b.webp"
+  "/images/best-seller/slide-1.webp",
+  "/images/best-seller/slide-2.webp",
+  "/images/best-seller/slide-3.webp"
 ];
 
 export function ServicesInfo() {
@@ -37,29 +37,29 @@ export function ServicesInfo() {
           <div>
             {/* Section Title */}
             <h2
-              className={`${cinzel.className} text-4xl md:text-5xl font-semibold mb-12 tracking-wider text-gray-900`}
+              className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl font-semibold mb-8 sm:mb-12 tracking-wider text-gray-900`}
             >
               Jewelry Services
             </h2>
 
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {/* Service 1 */}
-              <div className="border-b border-gray-200 pb-8">
-                <div className="flex items-baseline gap-3">
+              <div className="border-b border-gray-200 pb-6 sm:pb-8">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-3">
                   <span
-                    className={`${raleway.className} font-semibold text-sm tracking-widest uppercase text-gray-900`}
+                    className={`${raleway.className} font-semibold text-xs sm:text-sm tracking-widest uppercase text-gray-900`}
                   >
                     Complimentary
                   </span>
                   <span
-                    className={`${raleway.className} text-gray-600 text-sm`}
+                    className={`${raleway.className} text-gray-600 text-xs sm:text-sm`}
                   >
                     custom design consultation
                   </span>
                 </div>
                 <div className="mt-3">
                   <span
-                    className={`${cinzel.className} text-3xl font-bold text-gray-900`}
+                    className={`${cinzel.className} text-2xl sm:text-3xl font-bold text-gray-900`}
                   >
                     RM 0
                   </span>
@@ -67,20 +67,20 @@ export function ServicesInfo() {
               </div>
 
               {/* Service 2 */}
-              <div className="border-b border-gray-200 pb-8">
-                <div className="flex items-baseline gap-3">
+              <div className="border-b border-gray-200 pb-6 sm:pb-8">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-3">
                   <span
-                    className={`${raleway.className} text-gray-600 text-sm`}
+                    className={`${raleway.className} text-gray-600 text-xs sm:text-sm`}
                   >
                     Ring resizing and engraving completed in
                   </span>
                   <span
-                    className={`${cinzel.className} text-3xl font-bold text-gray-900`}
+                    className={`${cinzel.className} text-2xl sm:text-3xl font-bold text-gray-900`}
                   >
                     24
                   </span>
                   <span
-                    className={`${raleway.className} text-gray-600 text-sm`}
+                    className={`${raleway.className} text-gray-600 text-xs sm:text-sm`}
                   >
                     Hours
                   </span>
@@ -88,20 +88,20 @@ export function ServicesInfo() {
               </div>
 
               {/* Service 3 */}
-              <div className="pb-8">
+              <div className="pb-6 sm:pb-8">
                 <div
-                  className={`${raleway.className} font-semibold text-sm tracking-widest uppercase text-gray-900 mb-2`}
+                  className={`${raleway.className} font-semibold text-xs sm:text-sm tracking-widest uppercase text-gray-900 mb-2`}
                 >
                   Gemstone care
                 </div>
                 <p
-                  className={`${raleway.className} text-gray-600 text-sm mb-3`}
+                  className={`${raleway.className} text-gray-600 text-xs sm:text-sm mb-3`}
                 >
                   certified moissanite polishing and precious metal repair
                 </p>
                 <div>
                   <span
-                    className={`${cinzel.className} text-3xl font-bold text-gray-900`}
+                    className={`${cinzel.className} text-2xl sm:text-3xl font-bold text-gray-900`}
                   >
                     RM 150+
                   </span>
@@ -110,29 +110,28 @@ export function ServicesInfo() {
             </div>
 
             {/* CTA Button */}
-            <div className="mt-12">
+            <div className="mt-10 sm:mt-12">
               <button
-                className={`${raleway.className} border-2 border-black bg-black text-white text-xs font-semibold tracking-widest px-12 py-3 hover:bg-black hover:text-white transition-all duration-300`}
+                className={`${raleway.className} border-2 border-black bg-black text-white text-xs sm:text-sm font-semibold tracking-widest px-10 sm:px-12 py-3 hover:bg-black hover:text-white transition-all duration-300 w-full sm:w-auto`}
               >
                 Book a Consultation
               </button>
             </div>
           </div>
           {/* Left Side - Image and Background (Now a Carousel) */}
-          <div className="relative h-96 md:h-[500px] bg-gradient-to-br from-[#e6e2dd]/60 to-[#f5f1ed] overflow-hidden rounded-2xl flex items-center justify-center p-4">
+          <div className="hidden relative h-[260px] sm:h-[320px] md:h-[550px] bg-gradient-to-br overflow-hidden rounded-2xl md:flex items-center justify-center p-3 sm:p-4">
             {images.map((imgSrc, index) => (
               <img
                 key={index}
                 src={imgSrc}
                 alt={`Service Slide ${index + 1}`}
-                className={`absolute inset-4 max-w-[calc(100%-2rem)] max-h-[calc(100%-4rem)] m-auto object-contain transition-opacity duration-1000 rounded-xl ${
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 rounded-sm ${
                   index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
                 }`}
               />
             ))}
 
-            {/* Slider dots */}
-            <div className="absolute bottom-6 flex space-x-3 z-20 w-full justify-center">
+            {/* Slider dots <div className="absolute bottom-6 flex space-x-3 z-20 w-full justify-center">
               {images.map((_, index) => (
                 <button
                   key={index}
@@ -145,7 +144,7 @@ export function ServicesInfo() {
                   aria-label={`Go to slide ${index + 1}`}
                 ></button>
               ))}
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>

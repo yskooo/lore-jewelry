@@ -19,7 +19,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200">
-      <div className=" container mx-auto px-4 h-24 md:h-28 flex items-center justify-between">
+      <div className=" container mx-auto px-4 h-24 md:h-24 flex items-center justify-between">
         <Link href="/" className="shrink-0 cursor-pointer">
           <Image
             src="/lore-jewelry-logo.jpeg"
