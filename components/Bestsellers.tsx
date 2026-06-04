@@ -159,17 +159,20 @@ export function Bestsellers() {
                 rel="noopener noreferrer"
                 className="flex flex-col items-center group cursor-pointer relative"
               >
-                <div className="w-full aspect-square mb-6 relative overflow-hidden">
+                <div className="w-full aspect-4/3 sm:aspect-square max-h-80 sm:max-h-none mb-6 relative overflow-hidden bg-white">
                   <Image
                     src={item.image}
                     alt={item.name}
                     fill
-                    className="object-cover mix-blend-darken group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain mix-blend-darken group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
 
                 <div className="text-center mt-auto mb-7 w-full space-y-2">
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-gray-400">
+                    {materialLabel}
+                  </p>
                   <h3
                     className={`${raleway.className} text-sm font-medium uppercase tracking-widest text-gray-800`}
                   >
