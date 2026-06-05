@@ -11,10 +11,57 @@ export default function About() {
       <Header />
       <main className="flex-grow container w-full  mx-auto px-4 py-12 md:py-20 flex flex-col items-center">
         <h1
-          className={`${cinzel.className} text-3xl md:text-5xl font-bold tracking-widest text-center text-gray-900 mb-12`}
+          className={`${cinzel.className} text-3xl md:text-5xl font-bold tracking-widest text-center text-gray-900 mb-4`}
         >
           ABOUT LORE JEWELRY
         </h1>
+        <p
+          className={`${raleway.className} text-sm md:text-base uppercase tracking-[0.35em] text-gray-500 text-center mb-12`}
+        >
+          Mother of Moissanite
+        </p>
+
+        {/* Brand Story */}
+        <div className="max-w-3xl w-full space-y-6 mb-20 text-center">
+          <p
+            className={`${raleway.className} text-gray-700 leading-relaxed tracking-wide`}
+          >
+            LORE JEWELRY, officially defined as the{" "}
+            <span className="font-semibold text-gray-900">
+              Mother of Moissanite
+            </span>
+            , is a premium jewellery brand specializing in 925 sterling silver
+            moissanite accessories. Since its establishment, LORE JEWELRY has
+            focused purely on moissanite jewellery — using only high-fire
+            premium moissanite stones and genuine 925 sterling silver. No alloy,
+            no imitation stones.
+          </p>
+          <p
+            className={`${raleway.className} text-gray-700 leading-relaxed tracking-wide`}
+          >
+            Moissanite is known as the star stone of the galaxy, possessing
+            extraordinary sparkle, clarity and brilliant fire that outshines
+            ordinary diamonds. Every LORE JEWELRY piece is crafted from 100% 925
+            sterling silver — hypoallergenic, durable and anti-tarnish,
+            perfectly designed for daily long-term wear. With precise cutting,
+            strict stone selection and professional inlay techniques, every
+            ring, necklace and earring delivers high-end texture and lasting
+            elegance.
+          </p>
+          <blockquote
+            className={`${cinzel.className} text-lg md:text-xl text-gray-900 italic tracking-wide pt-4`}
+          >
+            “To bring eternal starlight brilliance into everyday life.”
+          </blockquote>
+          <p
+            className={`${raleway.className} text-gray-700 leading-relaxed tracking-wide`}
+          >
+            As the Mother of Moissanite, we eliminate unreasonable luxury
+            markups and insist on honest materials and fine craftsmanship —
+            allowing every wearer to own high-class, eye-catching and timeless
+            moissanite jewellery at an accessible price.
+          </p>
+        </div>
 
         <div className="max-w-4xl w-full space-y-12">
           {/* Section 1 */}
