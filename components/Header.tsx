@@ -84,6 +84,7 @@ export function Header() {
 
           {[
             { label: "About", href: "/about" },
+            { label: "Size Guide", href: "/size-guide" },
             { label: "FAQ", href: "/faq" }
           ].map((item) => (
             <Link

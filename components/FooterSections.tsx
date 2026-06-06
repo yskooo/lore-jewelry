@@ -1,25 +1,54 @@
 import React from "react";
 import Link from "next/link";
 import { socialLinks } from "../data/site";
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+    </svg>
+  );
+}
+
+// TikTok has no lucide icon, so we use the official glyph.
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.3 0 .59.04.87.13V9.4a6.33 6.33 0 0 0-5.94 10.69 6.33 6.33 0 0 0 10.74-4.51V8.6a8.16 8.16 0 0 0 4.66 1.46v-3.4a4.85 4.85 0 0 1-.22.03z" />
+    </svg>
+  );
+}
 
 export function FooterSections() {
   return (
     <>
       {/* Information Row */}
-      <section className="pt-24 pb-32 ">
-        <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-8 lg:gap-16">
-          <div className="lg:w-1/5 shrink-0 flex flex-row lg:flex-col justify-between items-start">
-            <h3 className="text-xl font-normal mb-4 tracking-wide text-gray-900">
-              Information
-            </h3>
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16">
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.3em] text-gray-400 mb-3">
+                News & Updates
+              </p>
+
+              <h2 className="text-3xl lg:text-4xl font-light tracking-tight text-gray-900">
+                Information
+              </h2>
+            </div>
+
             <a
               href="#"
-              className="text-blue-500 text-sm font-bold flex items-center hover:underline tracking-wide"
+              className="group mt-6 lg:mt-0 inline-flex items-center text-sm tracking-[0.15em] uppercase text-gray-500 hover:text-black transition-colors"
             >
-              See all Information <span className="ml-1 text-xs">▶</span>
+              View All Information
+              <span className="ml-3 group-hover:translate-x-1 transition-transform">
+                →
+              </span>
             </a>
           </div>
-          <div className="lg:w-4/5 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {[
               {
                 date: "2026.05.28 | Latest Information",
@@ -38,34 +67,51 @@ export function FooterSections() {
                 outline: true
               }
             ].map((item, i) => (
-              <div key={i} className="flex flex-col group cursor-pointer">
-                <div className="aspect-[16/10] bg-[#bebebe] mb-4 overflow-hidden flex items-center justify-center relative">
+              <article key={i} className="group cursor-pointer">
+                {/* Image */}
+                <div className="aspect-[16/10] overflow-hidden bg-[#f5f5f5] mb-6 relative">
                   {item.outline ? (
-                    <div className="text-center">
-                      {/* Mock of OWNDAYS empty info image */}
-                      <div className="w-12 h-6 border-2 border-white/60 mx-auto rounded-sm flex items-center justify-center opacity-80 mb-2">
-                        <div className="w-2 h-2 rounded-full border border-white/60 mx-1"></div>
-                        <div className="w-2 h-2 rounded-full border border-white/60 mx-1"></div>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#efefef] group-hover:bg-[#e9e9e9] transition-colors">
+                      <div className="w-14 h-7 border border-gray-400 rounded-sm flex items-center justify-center mb-3">
+                        <div className="w-2 h-2 rounded-full border border-gray-400 mx-1"></div>
+                        <div className="w-2 h-2 rounded-full border border-gray-400 mx-1"></div>
                       </div>
-                      <p className="text-white text-[12px] font-bold tracking-[0.2em] uppercase">
+
+                      <span className="text-[11px] tracking-[0.3em] text-gray-500 uppercase">
                         LORE
-                      </p>
+                      </span>
                     </div>
                   ) : (
                     <img
                       src={item.img}
                       alt={item.title}
-                      className="w-full h-full object-cover grayscale mix-blend-multiply opacity-80 group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   )}
+
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
                 </div>
-                <p className="text-xs text-gray-500 mb-2 font-medium tracking-wide">
+
+                {/* Meta */}
+                <p className="text-[11px] uppercase tracking-[0.18em] text-gray-400 mb-3">
                   {item.date}
                 </p>
-                <p className="text-sm text-gray-800 font-medium leading-relaxed max-w-[280px]">
+
+                {/* Title */}
+                <h3 className="text-lg font-medium leading-relaxed text-gray-900 group-hover:text-black transition-colors">
                   {item.title}
-                </p>
-              </div>
+                </h3>
+
+                {/* Read More */}
+                <div className="mt-6 flex items-center text-sm text-gray-500 group-hover:text-black transition-colors">
+                  <span>Read More</span>
+
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -172,181 +218,240 @@ export function FooterSections() {
       </section> */}
 
       {/* Footer Nav */}
-      <footer className="bg-[#f2f2f2] pt-20 pb-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-6 gap-y-12 mb-20 text-sm">
+      <footer className="bg-[#0a0a0b] border-t border-white/10 pt-24 pb-12 text-white">
+        <div className="container mx-auto px-6 lg:px-8">
+          {/* Main Footer */}
+          <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-10 xl:gap-x-16 gap-y-14 mb-24">
+            {/* Products */}
             <div>
-              <h4 className="text-sm font-bold uppercase tracking-[0.15em] mb-5 text-gray-900">
+              <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] mb-6 text-white">
                 PRODUCTS
               </h4>
-              <ul className="space-y-4 text-gray-500">
+
+              <ul className="space-y-3 text-sm text-gray-400">
                 <li>
                   <Link
                     href="/?tab=Ring#bestsellers"
-                    className="hover:text-black"
+                    className="hover:text-white transition-colors duration-300"
                   >
                     Moissanite Rings
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     href="/?tab=Ring#bestsellers"
-                    className="hover:text-black"
+                    className="hover:text-white transition-colors duration-300"
                   >
                     Moissanite Bands
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/#bestsellers" className="hover:text-black">
+                  <Link
+                    href="/#bestsellers"
+                    className="hover:text-white transition-colors duration-300"
+                  >
                     Moissanite Bracelet
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     href="/?tab=Earrings#bestsellers"
-                    className="hover:text-black"
+                    className="hover:text-white transition-colors duration-300"
                   >
                     Moissanite Earrings
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/#bestsellers" className="hover:text-black">
+                  <Link
+                    href="/#bestsellers"
+                    className="hover:text-white transition-colors duration-300"
+                  >
                     Moissanite Necklace
                   </Link>
                 </li>
+
                 <li>
                   <Link
                     href="/?tab=Ring#bestsellers"
-                    className="hover:text-black"
+                    className="hover:text-white transition-colors duration-300"
                   >
-                    Men&apos;s Ring
+                    Men's Ring
                   </Link>
                 </li>
               </ul>
             </div>
-            <div className="lg:col-span-1">
-              <h4 className="text-sm font-bold uppercase tracking-[0.15em] mb-5 text-gray-900">
+
+            {/* Purchase */}
+            <div>
+              <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] mb-6 text-white">
                 PURCHASE
               </h4>
-              <ul className="space-y-4 text-gray-500">
+
+              <ul className="space-y-3 text-sm text-gray-400">
                 <li>
-                  <Link href="/after-sales" className="hover:text-black">
+                  <Link
+                    href="/after-sales"
+                    className="hover:text-white transition-colors duration-300"
+                  >
                     LORE Customer Guarantees
                   </Link>
                 </li>
+
                 <li>
-                  <a href="#" className="hover:text-black">
+                  <a
+                    href="#"
+                    className="hover:text-white transition-colors duration-300"
+                  >
                     Size Guide
                   </a>
                 </li>
               </ul>
             </div>
+
+            {/* About */}
             <div>
-              <h4 className="text-sm font-bold uppercase tracking-[0.15em] mb-5 text-gray-900">
+              <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] mb-6 text-white">
                 ABOUT
               </h4>
-              <ul className="space-y-4 text-gray-500">
+
+              <ul className="space-y-3 text-sm text-gray-400">
                 <li>
-                  <Link href="/about" className="hover:text-black">
+                  <Link
+                    href="/about"
+                    className="hover:text-white transition-colors duration-300"
+                  >
                     Brand Story
                   </Link>
                 </li>
+
                 <li>
-                  <a href="#" className="hover:text-black">
+                  <a
+                    href="#"
+                    className="hover:text-white transition-colors duration-300"
+                  >
                     Shops
                   </a>
                 </li>
+
                 <li>
-                  <Link href="/after-sales" className="hover:text-black">
+                  <Link
+                    href="/after-sales"
+                    className="hover:text-white transition-colors duration-300"
+                  >
                     After-Sales Service
                   </Link>
                 </li>
               </ul>
             </div>
+
+            {/* Support */}
             <div>
-              <h4 className="text-sm font-bold uppercase tracking-[0.15em] mb-5 text-gray-900">
+              <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] mb-6 text-white">
                 SUPPORT
               </h4>
-              <ul className="space-y-4 text-gray-500">
+
+              <ul className="space-y-3 text-sm text-gray-400">
                 <li>
-                  <Link href="/faq" className="hover:text-black">
+                  <Link
+                    href="/faq"
+                    className="hover:text-white transition-colors duration-300"
+                  >
                     FAQs
                   </Link>
                 </li>
+
                 <li>
-                  <Link href="/after-sales" className="hover:text-black">
-                    Returns &amp; Refunds
+                  <Link
+                    href="/after-sales"
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    Returns & Refunds
                   </Link>
                 </li>
+
                 <li>
                   <a
                     href={socialLinks.instagram}
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-black"
+                    className="hover:text-white transition-colors duration-300"
                   >
                     Instagram
                   </a>
                 </li>
+
+                <li>
+                  <a
+                    href={socialLinks.tiktok}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-white transition-colors duration-300"
+                  >
+                    TikTok
+                  </a>
+                </li>
               </ul>
             </div>
-            <div className="col-span-2 lg:col-span-2 mt-4 lg:mt-0">
-              <h4 className="text-sm font-bold uppercase tracking-[0.15em] mb-5 text-gray-900">
+
+            {/* Contact */}
+            <div className="col-span-2 lg:col-span-2 lg:border-l lg:border-white/10 lg:pl-12">
+              <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] mb-6 text-white">
                 CONTACT US
               </h4>
-              <p className="text-xl font-bold mb-3 tracking-wider text-black">
+
+              <p className="text-3xl font-light tracking-[0.08em] text-white mb-4">
                 0917-701-6030
               </p>
-              <p className="text-sm text-gray-500 mb-1.5 font-medium">
-                Monday to Friday
-              </p>
-              <p className="text-sm text-black font-bold tracking-wide">
+
+              <p className="text-sm text-gray-400 mb-2">Monday to Friday</p>
+
+              <p className="text-sm text-gray-300 leading-relaxed">
                 Operating Hours 9:30 - 12:00 and 13:00 - 18:30
               </p>
             </div>
           </div>
 
-          <div className="flex flex-col pb-8">
-            <div className="flex items-center space-x-6 mb-8 text-black">
-              <a
-                href={socialLinks.instagram}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Lore Jewelry on Instagram"
-                className="hover:text-gray-600 transition-colors"
-              >
-                <svg
-                  className="w-[18px] h-[18px]"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
+          {/* Bottom Footer */}
+          <div className="border-t border-white/10 pt-8">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+              {/* Copyright */}
+              <div>
+                <p className="text-[11px] text-gray-500 uppercase tracking-[0.25em] mb-4">
+                  COPYRIGHT (C) LORE JEWELRY CO., LTD. ALL RIGHTS RESERVED.
+                </p>
+
+                <div className="flex flex-col md:flex-row md:items-center text-sm text-gray-500">
+                  <span>Malaysia</span>
+                  <span className="hidden md:block mx-3 text-gray-700">|</span>
+                  <span>English</span>
+                </div>
+              </div>
+
+              {/* Social Icons */}
+              <div className="flex items-center gap-5">
+                <a
+                  href={socialLinks.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram"
+                  className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110"
                 >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                </svg>
-              </a>
-              <a
-                href={socialLinks.tiktok}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Lore Jewelry on TikTok"
-                className="hover:text-gray-600 transition-colors"
-              >
-                <svg
-                  className="w-[18px] h-[18px]"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
+                  <InstagramIcon className="w-5 h-5" />
+                </a>
+
+                <a
+                  href={socialLinks.tiktok}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="TikTok"
+                  className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110"
                 >
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.3 0 .59.04.87.13V9.4a6.33 6.33 0 0 0-5.94 10.69 6.33 6.33 0 0 0 10.74-4.51V8.6a8.16 8.16 0 0 0 4.66 1.46v-3.4a4.85 4.85 0 0 1-.22.03z" />
-                </svg>
-              </a>
-            </div>
-            <div>
-              <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">
-                COPYRIGHT (C) LORE JEWELRY co., ltd. ALL RIGHTS RESERVED.
-              </p>
-              <div className="flex flex-col md:flex-row items-start md:items-center text-sm text-gray-600 font-medium">
-                <span>Philippine</span>
-                <span className="hidden md:inline mx-2 text-gray-300">|</span>
-                <span className="mt-1 md:mt-0">English</span>
+                  <TikTokIcon className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </div>
