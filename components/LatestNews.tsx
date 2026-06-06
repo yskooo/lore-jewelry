@@ -35,24 +35,34 @@ export function LatestNews() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-28 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-2xl font-normal tracking-wide mb-14 text-gray-900">
-          Latest News
-        </h2>
+        {/* Header upgrade */}
+        <div className="text-center mb-16">
+          <h2 className="text-2xl font-light tracking-[0.25em] text-gray-900">
+            Latest News
+          </h2>
+          <div className="mt-4 mx-auto w-12 h-px bg-gray-300" />
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Main Large Square */}
-          <div className="relative group overflow-hidden cursor-pointer aspect-square bg-gray-900">
+        {/* Main layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {/* LEFT: Hero tile */}
+          <div className="relative group overflow-hidden aspect-square bg-black">
             <img
               src={news[0].img}
               alt={news[0].title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700  "
+              className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-700 opacity-90"
             />
-            <div className="absolute inset-x-0 bottom-12 flex flex-col items-center justify-center pointer-events-none">
-              <p className="text-white font-bold tracking-widest uppercase text-xl md:text-2xl">
+
+            {/* softer gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+
+            {/* improved typography spacing */}
+            <div className="absolute inset-x-0 bottom-10 px-6 text-center">
+              <p className="text-white font-light tracking-[0.3em] text-sm md:text-base">
                 LORE{" "}
-                <span className="font-light normal-case text-2xl md:text-4xl mx-2">
+                <span className="font-normal tracking-widest text-xl md:text-3xl mx-2">
                   Nebula
                 </span>{" "}
                 Moissanite
@@ -60,23 +70,28 @@ export function LatestNews() {
             </div>
           </div>
 
-          {/* 4 Small Squares */}
-          <div className="grid grid-cols-2 gap-4">
+          {/* RIGHT: Grid tiles */}
+          <div className="grid grid-cols-2 gap-6 md:gap-8">
             {news.slice(1).map((item) => (
               <div
                 key={item.id}
-                className="relative group overflow-hidden cursor-pointer aspect-square bg-gray-100"
+                className="relative group overflow-hidden aspect-square bg-gray-100"
               >
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute bottom-6 left-0 right-0 text-center pointer-events-none">
-                  <p className="text-white font-bold tracking-[0.2em] text-[10px] uppercase">
+
+                {/* refined overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
+
+                {/* better spacing for text */}
+                <div className="absolute bottom-6 left-0 right-0 text-center px-3">
+                  <p className="text-white font-semibold tracking-[0.25em] text-[10px] uppercase">
                     LORE
                   </p>
-                  <p className="text-white font-bold tracking-widest text-2xl mt-1 uppercase ">
+                  <p className="text-white font-semibold tracking-widest text-lg md:text-xl mt-1 uppercase">
                     {item.text}
                   </p>
                 </div>
@@ -85,8 +100,9 @@ export function LatestNews() {
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <button className="border border-gray-300 text-[11px] text-gray-700 font-bold uppercase tracking-widest px-20 py-4 hover:border-black hover:text-black transition-colors bg-white">
+        {/* CTA refinement */}
+        <div className="text-center mt-16">
+          <button className="border border-gray-300 text-[11px] text-gray-700 font-semibold uppercase tracking-[0.25em] px-16 py-4 hover:border-black hover:text-black transition-all duration-300 bg-white">
             View More
           </button>
         </div>

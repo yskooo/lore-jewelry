@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Bestsellers } from "@/components/Bestsellers";
 import { ServicesInfo } from "@/components/ServicesInfo";
 import { LatestNews } from "@/components/LatestNews";
+import { StarterProducts } from "@/components/StarterProducts";
 // import { SearchCategories } from "@/components/SearchCategories";
 import { PopularCollections } from "@/components/PopularCollections";
 import { FooterSections } from "@/components/FooterSections";
@@ -16,6 +17,7 @@ export default function Home() {
       <Suspense fallback={<div className="py-20" />}>
         <Bestsellers />
       </Suspense>
+      <StarterProducts />
       <hr className="border-t border-gray-200 mx-20" />
       <ServicesInfo />
       <LatestNews />

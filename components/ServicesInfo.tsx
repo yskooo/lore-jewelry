@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { Cinzel, Raleway } from "next/font/google";
-import Image from "next/image";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -29,23 +28,23 @@ export function ServicesInfo() {
     }, 4000);
     return () => clearInterval(timer);
   }, []);
+
   return (
-    <section className="bg-white py-24 w-full">
+    <section className="bg-white py-28 w-full">
       <div className="max-w-[1400px] mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Right Side - Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 lg:gap-24 items-center">
+          {/* LEFT: Content (moved here) */}
           <div>
-            {/* Section Title */}
             <h2
-              className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl font-semibold mb-8 sm:mb-12 tracking-wider text-gray-900`}
+              className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl font-medium tracking-wider text-gray-900`}
             >
               Jewelry Services
             </h2>
 
-            <div className="space-y-6 sm:space-y-8">
+            <div className="mt-10 space-y-10">
               {/* Service 1 */}
-              <div className="border-b border-gray-200 pb-6 sm:pb-8">
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-3">
+              <div className="pb-8 border-b border-gray-100">
+                <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
                   <span
                     className={`${raleway.className} font-semibold text-xs sm:text-sm tracking-widest uppercase text-gray-900`}
                   >
@@ -57,9 +56,10 @@ export function ServicesInfo() {
                     custom design consultation
                   </span>
                 </div>
-                <div className="mt-3">
+
+                <div className="mt-4">
                   <span
-                    className={`${cinzel.className} text-2xl sm:text-3xl font-bold text-gray-900`}
+                    className={`${cinzel.className} text-2xl sm:text-3xl font-semibold text-gray-900`}
                   >
                     RM 0
                   </span>
@@ -67,18 +67,20 @@ export function ServicesInfo() {
               </div>
 
               {/* Service 2 */}
-              <div className="border-b border-gray-200 pb-6 sm:pb-8">
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-3">
+              <div className="pb-8 border-b border-gray-100">
+                <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
                   <span
                     className={`${raleway.className} text-gray-600 text-xs sm:text-sm`}
                   >
                     Ring resizing and engraving completed in
                   </span>
+
                   <span
-                    className={`${cinzel.className} text-2xl sm:text-3xl font-bold text-gray-900`}
+                    className={`${cinzel.className} text-2xl sm:text-3xl font-semibold text-gray-900`}
                   >
                     24
                   </span>
+
                   <span
                     className={`${raleway.className} text-gray-600 text-xs sm:text-sm`}
                   >
@@ -88,63 +90,55 @@ export function ServicesInfo() {
               </div>
 
               {/* Service 3 */}
-              <div className="pb-6 sm:pb-8">
+              <div>
                 <div
-                  className={`${raleway.className} font-semibold text-xs sm:text-sm tracking-widest uppercase text-gray-900 mb-2`}
+                  className={`${raleway.className} font-semibold text-xs sm:text-sm tracking-widest uppercase text-gray-900`}
                 >
                   Gemstone care
                 </div>
+
                 <p
-                  className={`${raleway.className} text-gray-600 text-xs sm:text-sm mb-3`}
+                  className={`${raleway.className} text-gray-600 text-xs sm:text-sm mt-2 mb-4 leading-relaxed`}
                 >
                   certified moissanite polishing and precious metal repair
                 </p>
-                <div>
-                  <span
-                    className={`${cinzel.className} text-2xl sm:text-3xl font-bold text-gray-900`}
-                  >
-                    RM 150+
-                  </span>
-                </div>
+
+                <span
+                  className={`${cinzel.className} text-2xl sm:text-3xl font-semibold text-gray-900`}
+                >
+                  RM 150+
+                </span>
               </div>
             </div>
 
-            {/* CTA Button */}
-            <div className="mt-10 sm:mt-12">
+            {/* CTA */}
+            <div className="mt-14">
               <button
-                className={`${raleway.className} border-2 border-black bg-black text-white text-xs sm:text-sm font-semibold tracking-widest px-10 sm:px-12 py-3 hover:bg-black hover:text-white transition-all duration-300 w-full sm:w-auto`}
+                className={`${raleway.className} bg-black text-white text-xs sm:text-sm font-semibold tracking-[0.25em] px-12 py-4 hover:bg-gray-900 transition-all duration-300`}
               >
                 Book a Consultation
               </button>
             </div>
           </div>
-          {/* Left Side - Image and Background (Now a Carousel) */}
-          <div className="hidden relative h-[260px] sm:h-[320px] md:h-[550px] bg-gradient-to-br overflow-hidden rounded-2xl md:flex items-center justify-center p-3 sm:p-4">
+
+          {/* RIGHT: Image carousel (now right side) */}
+          <div className="hidden md:flex relative h-[520px] rounded-2xl overflow-hidden bg-black">
+            <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/10 to-black/60 z-10" />
+
             {images.map((imgSrc, index) => (
               <img
                 key={index}
                 src={imgSrc}
                 alt={`Service Slide ${index + 1}`}
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 rounded-sm ${
-                  index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                  index === currentSlide
+                    ? "opacity-100 scale-105"
+                    : "opacity-0 scale-100"
                 }`}
               />
             ))}
 
-            {/* Slider dots <div className="absolute bottom-6 flex space-x-3 z-20 w-full justify-center">
-              {images.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                    index === currentSlide
-                      ? "bg-black"
-                      : "bg-black/30 hover:bg-black/60"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                ></button>
-              ))}
-            </div>*/}
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/70 to-transparent z-20" />
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ export function PopularCollections() {
       image:
         "https://down-my.img.susercontent.com/file/my-11134207-7qul1-livh27h7awxyf9.webp",
       price: "RM230.67",
-      url: "https://shopee.com.my/Lore-Jewellery-Qiun-Wave-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICAT-i.865633567.18890517215?extraParams=%7B%22display_model_id%22%3A221774173722%2C%22model_selection_logic%22%3A3%7D"
+      url: "https://shopee.com.my/Lore-Jewellery-Qiun-Wave-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONACERTIFICAT-i.865633567.18890517215?extraParams=%7B%22display_model_id%22%3A221774173722%2C%22model_selection_logic%22%3A3%7D"
     },
     {
       name: "Silver Xavier Luxury Moissanite Ring",
@@ -75,43 +75,50 @@ export function PopularCollections() {
       url: "https://shopee.com.my/Lore-Jewellery-Harper-Round-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.20390536087?extraParams=%7B%22display_model_id%22%3A186862261570%2C%22model_selection_logic%22%3A3%7D"
     }
   ];
-  return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-center text-2xl font-normal tracking-wide mb-14 text-gray-900">
-          Popular Collections
-        </h2>
 
-        {/* Adjusted to 4x2 grid to match Owndays more closely (it shows 4 across) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+  return (
+    <section className="py-28 bg-white">
+      <div className="container mx-auto px-4">
+        {/* Header spacing improved */}
+        <div className="text-center mb-16">
+          <h2 className="text-2xl font-light tracking-[0.2em] text-gray-900">
+            Popular Collections
+          </h2>
+          <div className="mt-4 mx-auto w-12 h-px bg-gray-300" />
+        </div>
+
+        {/* Grid spacing + layout refinement */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-16">
           {popularCollections.map((col) => (
             <a
               key={col.name}
               href={col.url}
               target="_blank"
               rel="noreferrer"
-              className="relative group overflow-hidden cursor-pointer aspect-square bg-gray-100 block"
+              className="group relative aspect-square overflow-hidden bg-gray-100 block rounded-sm"
             >
               <img
                 src={col.image}
                 alt={col.name}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
+                className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
-              <div className="absolute bottom-6 left-0 w-full px-4 text-white text-left">
-                <p className="text-sm  font-medium leading-5 tracking-widest">
+
+              {/* softer gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
+
+              {/* improved text spacing */}
+              <div className="absolute bottom-0 left-0 w-full px-5 py-5 text-white">
+                <p className="text-sm font-medium tracking-wide leading-snug">
                   {col.name}
                 </p>
-                {/*<p className="mt-1 text-[11px] font-light leading-5">
-                  {col.details}
-                </p>*/}
               </div>
             </a>
           ))}
         </div>
 
-        <div className="text-center mt-6">
-          <button className="border border-gray-300 text-[11px] text-gray-700 font-bold uppercase tracking-widest px-20 py-4 hover:border-black hover:text-black transition-colors bg-white">
+        {/* CTA spacing + refinement */}
+        <div className="text-center">
+          <button className="border border-gray-300 text-[11px] text-gray-700 font-semibold uppercase tracking-[0.25em] px-16 py-4 hover:border-black hover:text-black transition-all duration-300 bg-white">
             View More
           </button>
         </div>

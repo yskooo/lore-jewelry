@@ -504,6 +504,37 @@ export const newArrivals = [
   }
 ];
 
+export const starterProducts: JewelryItem[] = [
+  {
+    name: "Aurora Moissanite Ring",
+    details: "0.5 CT VVS 1, Color Grade D, 925 Sterling Silver",
+    price: "RM98.67",
+    image: "/images/best-seller/Start Product 1.jpg",
+    url: "#"
+  },
+  {
+    name: "Luna Moissanite Necklace",
+    details: "1 CT VVS 1, Color Grade D, 925 Sterling Silver",
+    price: "RM128.67",
+    image: "/images/best-seller/Start Product 2.jpg",
+    url: "#"
+  },
+  {
+    name: "Elysian Moissanite Bracelet",
+    details: "0.8 CT VVS 1, Color Grade D, 925 Sterling Silver",
+    price: "RM148.67",
+    image: "/images/best-seller/Start Product 3.jpg",
+    url: "#"
+  },
+  {
+    name: "Stella Moissanite Earrings",
+    details: "0.6 CT VVS 1, Color Grade D, 925 Sterling Silver",
+    price: "RM112.67",
+    image: "/images/best-seller/Start Product 4.jpg",
+    url: "#"
+  }
+];
+
 export const earrings: JewelryItem[] = [
   {
     name: "Flower Pearl Moissanite Earrings",

@@ -2,7 +2,7 @@ import React from "react";
 
 export function Hero() {
   return (
-    <section className="relative w-full mt-16 bg-gray-50 flex items-center justify-center overflow-hidden h-[500px] md:h-[650px]">
+    <section className="relative w-full mt-16 bg-gray-50 flex items-center justify-center overflow-hidden h-[500px] md:h-[700px]">
       <video
         autoPlay
         muted
@@ -10,10 +10,7 @@ export function Hero() {
         playsInline
         className="w-full h-full object-cover"
       >
-        <source
-          src="https://down-aka-my.vod.susercontent.com/api/v4/11110109/ori/my_86093bdf-3114-4173-a17b-4ec0dd44e762_000146.ori.mp4"
-          type="video/mp4"
-        />
+        <source src="/videos/Home Video Update.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
 
