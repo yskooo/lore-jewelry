@@ -36,11 +36,11 @@ export function Header() {
       <div className=" container mx-auto px-4 h-24 md:h-24 flex items-center justify-between">
         <Link href="/" className="shrink-0 cursor-pointer">
           <Image
-            src="/lore-jewelry-logo.jpeg"
+            src="/images/lore-jewelry-logo.jpeg"
             alt="Lore Jewelry Logo"
-            width={240}
-            height={120}
-            className="object-contain h-20 md:h-28 w-auto mix-blend-multiply"
+            width={2400}
+            height={100}
+            className="object-contain p-6 sm:p-4 h-20 md:h-28 w-auto mix-blend-multiply"
             priority
           />
         </Link>
@@ -116,12 +116,12 @@ export function Header() {
           >
             <TikTokIcon className="w-[18px] h-[18px]" />
           </a>
-          <button className="text-black hover:text-gray-500 hidden md:block">
+          {/* <button className="text-black hover:text-gray-500 hidden md:block">
             <Search className="w-5 h-5 stroke-[1.5]" />
           </button>
           <button className="text-black hover:text-gray-500 hidden md:block">
             <Heart className="w-5 h-5 stroke-[1.5]" />
-          </button>
+          </button> */}
           <button
             className="text-black hover:text-gray-500 md:hidden"
             onClick={toggleMobileMenu}
@@ -198,12 +198,12 @@ export function Header() {
               >
                 <TikTokIcon className="w-[18px] h-[18px]" />
               </a>
-              <button className="text-black hover:text-gray-500">
+              {/* <button className="text-black hover:text-gray-500">
                 <Search className="w-5 h-5 stroke-[1.5]" />
               </button>
               <button className="text-black hover:text-gray-500">
                 <Heart className="w-5 h-5 stroke-[1.5]" />
-              </button>
+              </button> */}
             </div>
           </div>
         </nav>
