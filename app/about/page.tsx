@@ -63,6 +63,50 @@ export default function About() {
           </p>
         </div>
 
+        {/* Materials & Craftsmanship */}
+        <div className="max-w-3xl w-full space-y-6 mb-20 text-center">
+          <h2
+            className={`${cinzel.className} text-xl md:text-2xl font-semibold tracking-wide text-gray-800`}
+          >
+            Materials &amp; Craftsmanship
+          </h2>
+          <p
+            className={`${raleway.className} text-gray-700 leading-relaxed tracking-wide`}
+          >
+            At Lore Jewelry, we believe fine jewelry should combine exceptional
+            beauty, lasting quality, and everyday wearability. Designed in New
+            York, our collections are crafted using premium S925 sterling silver
+            and finished with a luxurious layer of 18K white gold plating,
+            creating a brilliant shine and enhanced durability.
+          </p>
+          <p
+            className={`${raleway.className} text-gray-700 leading-relaxed tracking-wide`}
+          >
+            Every piece features 100% genuine moissanite stones, carefully
+            selected in the highest D color grade for their remarkable
+            brilliance, clarity, and diamond-like appearance. Known for its
+            exceptional sparkle and durability, moissanite offers a luxurious
+            look while remaining suitable for everyday wear.
+          </p>
+          <p
+            className={`${raleway.className} text-gray-700 leading-relaxed tracking-wide`}
+          >
+            Our jewelry is available in a variety of timeless cuts, including
+            Round, Oval, Emerald, and other classic silhouettes. Each design is
+            thoughtfully created to balance elegance and versatility, making
+            every piece suitable for both daily styling and special occasions.
+          </p>
+          <p
+            className={`${raleway.className} text-gray-700 leading-relaxed tracking-wide`}
+          >
+            From material selection to final finishing, we are committed to
+            delivering jewelry that reflects superior craftsmanship, enduring
+            quality, and sophisticated design. The result is a collection that
+            looks and feels luxurious while remaining accessible for modern
+            jewelry lovers.
+          </p>
+        </div>
+
         <div className="max-w-4xl w-full space-y-12">
           {/* Section 1 */}
           <div className="flex flex-col items-center space-y-6">

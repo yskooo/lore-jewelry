@@ -535,6 +535,37 @@ export const starterProducts: JewelryItem[] = [
   }
 ];
 
+export const newCollection: JewelryItem[] = [
+  {
+    name: "Celestia Moissanite Ring",
+    details: "1 CT VVS 1, Color Grade D, 18K White Gold Plated",
+    price: "$48.17",
+    image: "/images/new-collection/New collection 1.jpg",
+    url: "#"
+  },
+  {
+    name: "Aria Moissanite Necklace",
+    details: "0.8 CT VVS 1, Color Grade D, 18K White Gold Plated",
+    price: "$42.17",
+    image: "/images/new-collection/New collection 1.2.jpg",
+    url: "#"
+  },
+  {
+    name: "Soleil Moissanite Earrings",
+    details: "0.6 CT VVS 1, Color Grade D, 18K White Gold Plated",
+    price: "$36.17",
+    image: "/images/new-collection/New collection 1.3.jpg",
+    url: "#"
+  },
+  {
+    name: "Vesper Moissanite Bracelet",
+    details: "0.8 CT VVS 1, Color Grade D, 18K White Gold Plated",
+    price: "$44.17",
+    image: "/images/new-collection/new collection 1.5.jpg",
+    url: "#"
+  }
+];
+
 export const earrings: JewelryItem[] = [
   {
     name: "Flower Pearl Moissanite Earrings",
