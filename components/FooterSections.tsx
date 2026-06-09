@@ -329,8 +329,6 @@ export function FooterSections() {
                 </p>
 
                 <div className="flex flex-col md:flex-row md:items-center text-sm text-gray-500">
-                  <span>Malaysia</span>
-                  <span className="hidden md:block mx-3 text-gray-700">|</span>
                   <span>English</span>
                 </div>
               </div>
