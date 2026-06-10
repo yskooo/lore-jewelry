@@ -2,9 +2,10 @@ import { Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Bestsellers } from "@/components/Bestsellers";
-import { ServicesInfo } from "@/components/ServicesInfo";
-import { LatestNews } from "@/components/LatestNews";
+// import { ServicesInfo } from "@/components/ServicesInfo";
+// import { LatestNews } from "@/components/LatestNews";
 import { StarterProducts } from "@/components/StarterProducts";
+import { NewCollection } from "@/components/NewCollection";
 // import { SearchCategories } from "@/components/SearchCategories";
 import { PopularCollections } from "@/components/PopularCollections";
 import { FooterSections } from "@/components/FooterSections";
@@ -18,9 +19,10 @@ export default function Home() {
         <Bestsellers />
       </Suspense>
       <StarterProducts />
+      <NewCollection />
       <hr className="border-t border-gray-200 mx-20" />
-      <ServicesInfo />
-      <LatestNews />
+      {/* <ServicesInfo /> */}
+      {/* <LatestNews /> */}
       {/* <SearchCategories /> */}
       <PopularCollections />
       <FooterSections />

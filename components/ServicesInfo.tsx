@@ -61,7 +61,7 @@ export function ServicesInfo() {
                   <span
                     className={`${cinzel.className} text-2xl sm:text-3xl font-semibold text-gray-900`}
                   >
-                    RM 0
+                    $0
                   </span>
                 </div>
               </div>
@@ -106,7 +106,7 @@ export function ServicesInfo() {
                 <span
                   className={`${cinzel.className} text-2xl sm:text-3xl font-semibold text-gray-900`}
                 >
-                  RM 150+
+                  $37.50+
                 </span>
               </div>
             </div>

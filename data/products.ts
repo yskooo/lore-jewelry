@@ -13,14 +13,14 @@ export const rings: JewelryItem[] = [
     name: "Emery Silver Moissanite",
     details:
       "0.5 CT, VVS 1, Color Grade D, Sterling Silver 925, White Gold 18K Plated",
-    price: "RM98.67",
+    price: "$24.67",
     image: "/images/best-seller/my-11134207-7qul4-livbuo87wz1f2c.jpg",
     url: "https://shopee.com.my/Lore-Jewellery-Emery-Silver-Moissanite-Ring-0.5-1.0-Carat-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.23372854382?extraParams=%7B%22display_model_id%22%3A167738363319%2C%22model_selection_logic%22%3A3%7D"
   },
   {
     name: "Libby Silver Moissanite",
     details: "1 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM164.67",
+    price: "$41.17",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7quky-livbuo87ojmre6.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Libby-Silver-Moissanite-0.5-1.0-Carat-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.23347367458?extraParams=%7B%22display_model_id%22%3A148271113938%2C%22model_selection_logic%22%3A3%7D"
@@ -28,7 +28,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Dakota Silver Moissanite",
     details: "VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM98.67",
+    price: "$24.67",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul8-livbuo87bwir57.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Dakota-Silver-Moissanite-Ring-Carat-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-i.865633567.22472854069?extraParams=%7B%22display_model_id%22%3A206859887754%2C%22model_selection_logic%22%3A3%7D"
@@ -36,7 +36,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Mae Silver Moissanite Ring",
     details: "VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM98.67",
+    price: "$24.67",
     image:
       "https://down-my.img.susercontent.com/file/my-11134201-7qula-lidv9us82og6f7@resize_w900_nl.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Mae-Silver-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICATE-i.865633567.22271665728?extraParams=%7B%22display_model_id%22%3A206832389701%2C%22model_selection_logic%22%3A3%7D"
@@ -44,7 +44,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Nora Luxury Moissanite",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM98.67",
+    price: "$24.67",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul9-lix321uq5fmre1.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Nora-Luxury-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.20181590395?extraParams=%7B%22display_model_id%22%3A214413091971%2C%22model_selection_logic%22%3A3%7D"
@@ -52,7 +52,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Leonor Crown Moissanite",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM98.67",
+    price: "$24.67",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul4-lix321uqb1vq15.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Leonor-Crown-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.21081598729?extraParams=%7B%22display_model_id%22%3A156924309819%2C%22model_selection_logic%22%3A3%7D"
@@ -60,7 +60,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Violetta Moissanite Ring",
     details: "0.01 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM131.67",
+    price: "$32.92",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul7-liy03ox48k7a35.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Violetta-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-i.865633567.23147536445?extraParams=%7B%22display_model_id%22%3A235384401337%2C%22model_selection_logic%22%3A3%7D"
@@ -68,7 +68,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Laia Simple Moissanite Ring",
     details: "0.01 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM131.67",
+    price: "$32.92",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul8-liwsozi28go3b5.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Laia-Simple-Moissanite-Ring-0.01-Carat-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.22147482344?extraParams=%7B%22display_model_id%22%3A184412733814%2C%22model_selection_logic%22%3A3%7D"
@@ -76,7 +76,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Hera Moissanite Ring",
     details: "0.01 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM131.67",
+    price: "$32.92",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qukx-liy03ox48k830d.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Hera-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-i.865633567.20290554423?extraParams=%7B%22display_model_id%22%3A206863788420%2C%22model_selection_logic%22%3A3%7D"
@@ -84,7 +84,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Nebula Moissanite Ring",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM64.67",
+    price: "$16.17",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul0-lixx5gq6r51i02.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Nebula-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.22447533294?extraParams=%7B%22display_model_id%22%3A196863733433%2C%22model_selection_logic%22%3A3%7D"
@@ -92,7 +92,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Kinara Simple Moissanite Ring",
     details: "0.01 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM164.67",
+    price: "$41.17",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7quky-liww02liflfq6a.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Kinara-Simple-Moissanite-Ring-0.01-Carat-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.22072977843?extraParams=%7B%22display_model_id%22%3A108948581846%2C%22model_selection_logic%22%3A3%7D"
@@ -100,7 +100,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Hazel Moissanite Ring",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM164.67",
+    price: "$41.17",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul3-lixx5gq6lirq03.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Hazel-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.20181604094?extraParams=%7B%22display_model_id%22%3A138670399101%2C%22model_selection_logic%22%3A3%7D"
@@ -108,7 +108,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Blanche Minimalist Moissanite Ring",
     details: "0.1 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM164.67",
+    price: "$41.17",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul1-liww02li8kmb2b.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Blanche-Minimalist-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.20181578592?extraParams=%7B%22display_model_id%22%3A127631409185%2C%22model_selection_logic%22%3A3%7D"
@@ -116,7 +116,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Star Light Moissanite Ring",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM164.67",
+    price: "$41.17",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul3-lj3qqb07k8rn11.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Star-Light-Moissanite-VVS-1-Color-Grade-D-Rings-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICATE-i.865633567.19889932468?extraParams=%7B%22display_model_id%22%3A216822906127%2C%22model_selection_logic%22%3A3%7D"
@@ -124,7 +124,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Star Queen Moissanite Ring",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM164.67",
+    price: "$41.17",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul9-liy03owu3cjqe2@resize_w900_nl.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Star-Queen-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-i.865633567.19290560945?extraParams=%7B%22display_model_id%22%3A167741294432%2C%22model_selection_logic%22%3A3%7D"
@@ -132,7 +132,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Fiona Luxury Moissanite",
     details: "1 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM164.67",
+    price: "$41.17",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul6-liwwj3j840o33a.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Fiona-Luxury-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.18581610832?extraParams=%7B%22display_model_id%22%3A194413097678%2C%22model_selection_logic%22%3A3%7D"
@@ -140,7 +140,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Wavy Luxury Moissanite Ring",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM165.00",
+    price: "$41.25",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul8-liy03owuptmu5c.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Wavy-Luxury-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-i.865633567.22873035381?extraParams=%7B%22display_model_id%22%3A184414128354%2C%22model_selection_logic%22%3A3%7D"
@@ -148,7 +148,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Bragi Mossanite Ring",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM182.82",
+    price: "$45.71",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul1-liy03owtxq9y9d.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Bragi-Moissanite-VVS-1-Color-Grade-D-Rings-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICATE-i.865633567.22345730559?extraParams=%7B%22display_model_id%22%3A216822511596%2C%22model_selection_logic%22%3A3%7D"
@@ -156,7 +156,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Kiara Silver Moissanite Ring",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM197.67",
+    price: "$49.42",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul0-liww02lih00z45.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Kiara-Silver-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.22772975180?extraParams=%7B%22display_model_id%22%3A175975778181%2C%22model_selection_logic%22%3A3%7D"
@@ -164,7 +164,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Gemini Moissanite Ring",
     details: "0.03 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM197.67",
+    price: "$49.42",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7quky-liy03ox3yq8za0.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Gemini-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-i.865633567.21190558432?extraParams=%7B%22display_model_id%22%3A235384402528%2C%22model_selection_logic%22%3A3%7D"
@@ -172,7 +172,7 @@ export const rings: JewelryItem[] = [
   {
     name: "All Round Moissanites",
     details: "0.2 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM227.70",
+    price: "$56.93",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul2-liwsozi1ueyua9.webp",
     url: "https://shopee.com.my/Lore-Jewellery-All-Round-Moissanites-Silver-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICAT-i.865633567.21481575648?extraParams=%7B%22display_model_id%22%3A216862245647%2C%22model_selection_logic%22%3A3%7D"
@@ -180,7 +180,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Crescent Star Silver Moissanite",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM230.67",
+    price: "$57.67",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul7-liwsozi2tj5yc8.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Crescent-Star-Silver-Moissanite-0.5-Carat-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.23672972204?extraParams=%7B%22display_model_id%22%3A158272548887%2C%22model_selection_logic%22%3A3%7D"
@@ -188,7 +188,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Twin Stars Moissanite",
     details: "0.01 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM230.67",
+    price: "$57.67",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul2-liwsozi2z5fq69.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Twin-Stars-Moissanite-Ring-0.01-Carat-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.23147477046?extraParams=%7B%22display_model_id%22%3A216862485342%2C%22model_selection_logic%22%3A3%7D"
@@ -196,7 +196,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Qiun Wave Silver Moissanite",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM230.67",
+    price: "$57.67",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul1-livdawvgri2u69.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Qiun-Wave-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICAT-i.865633567.18890517215?extraParams=%7B%22display_model_id%22%3A221774173722%2C%22model_selection_logic%22%3A3%7D"
@@ -204,7 +204,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Noreen Twist Silver Moissanite",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM230.67",
+    price: "$57.67",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul3-livdawvgub7qf0.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Noreen-Twist-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICAT-i.865633567.16295210977?extraParams=%7B%22display_model_id%22%3A156922923973%2C%22model_selection_logic%22%3A3%7D"
@@ -212,7 +212,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Flower Pearl Moissanite Ring",
     details: "0.01 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM230.67",
+    price: "$57.67",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul3-liwsozi21ftv90.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Flower-Pearl-Moissanite-Ring-0.01Ct-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.15497773058?extraParams=%7B%22display_model_id%22%3A146924103973%2C%22model_selection_logic%22%3A3%7D"
@@ -220,7 +220,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Eden Flower Moissanite Ring",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM263.67",
+    price: "$65.92",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul7-lixzfns09npif0.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Eden-Flower-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-i.865633567.23673021058?extraParams=%7B%22display_model_id%22%3A79324518770%2C%22model_selection_logic%22%3A3%7D"
@@ -228,7 +228,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Estella Luxury Silver Moissanite",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM263.67",
+    price: "$65.92",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul7-livbuo8722jn3e@resize_w900_nl.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Estella-Luxury-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICAT-i.865633567.22372855997?extraParams=%7B%22display_model_id%22%3A221773084764%2C%22model_selection_logic%22%3A3%7D"
@@ -236,7 +236,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Harper Round Silver Moissanite",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM263.67",
+    price: "$65.92",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul8-liwsozi22udi1a.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Harper-Round-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.20390536087?extraParams=%7B%22display_model_id%22%3A186862261570%2C%22model_selection_logic%22%3A3%7D"
@@ -244,7 +244,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Aurel Silver Moissanite",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM273.24",
+    price: "$68.31",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul7-livh27h79ieb67.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Aurel-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICAT-i.865633567.22772897458?extraParams=%7B%22display_model_id%22%3A146923142382%2C%22model_selection_logic%22%3A3%7D"
@@ -252,7 +252,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Evangeline Silver Moissanite",
     details: "0.1 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM296.67",
+    price: "$74.17",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul8-liwsozi2b9s6e9.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Evangeline-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.23072966858?extraParams=%7B%22display_model_id%22%3A204412628684%2C%22model_selection_logic%22%3A3%7D"
@@ -260,7 +260,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Silver Arthur Luxury Moissanite Ring",
     details: "1 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM297.00",
+    price: "$74.25",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul5-lixx5gq6aa868e.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Silver-Arthur-Luxury-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-i.865633567.14099103652?extraParams=%7B%22display_model_id%22%3A204413890828%2C%22model_selection_logic%22%3A3%7D"
@@ -268,7 +268,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Silver Xavier Luxury Moissanite",
     details: "1 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM313.50",
+    price: "$78.38",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qukw-lixx5gq6bosm8b.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Silver-Xavier-Luxury-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.22547529020?extraParams=%7B%22display_model_id%22%3A128670435432%2C%22model_selection_logic%22%3A3%7D"
@@ -276,7 +276,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Silver Maximus Luxury Moissanite Ring",
     details: "1 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM313.50",
+    price: "$78.38",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qukw-lixx5gq77zuu39.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Silver-Maximus-Luxury-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.21181592992?extraParams=%7B%22display_model_id%22%3A138670430248%2C%22model_selection_logic%22%3A3%7D"
@@ -284,7 +284,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Angel Eye Moissanite Ring",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM329.67",
+    price: "$82.42",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7quky-lixzfns018aua0.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Angel-Eye-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-i.865633567.23873029212?extraParams=%7B%22display_model_id%22%3A231778613806%2C%22model_selection_logic%22%3A3%7D"
@@ -292,7 +292,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Marquise Shaped Silver Moissanite",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM329.67",
+    price: "$82.42",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul8-liwsozi2gw1y37.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Marquise-Shaped-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.22647478681?extraParams=%7B%22display_model_id%22%3A225382416197%2C%22model_selection_logic%22%3A3%7D"
@@ -300,7 +300,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Halley Moissanite Ring",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM329.67",
+    price: "$82.42",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul0-lixzfns0b2ar25.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Halley-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.22247534054?extraParams=%7B%22display_model_id%22%3A177741170096%2C%22model_selection_logic%22%3A3%7D"
@@ -308,7 +308,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Eleanore & Atlas Moissanite COUPLE",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM329.67",
+    price: "$82.42",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul5-liy03ox42xxi50.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Eleanore-Atlas-Moissanite-COUPLE-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-i.865633567.22047539884?extraParams=%7B%22display_model_id%22%3A214413975252%2C%22model_selection_logic%22%3A3%7D"
@@ -316,7 +316,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Forever Love Couple Moissanite",
     details: "0.08 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM329.67",
+    price: "$82.42",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7quky-livdawvh456u6b.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Forever-Love-Couple-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICAT-i.865633567.21481555940?extraParams=%7B%22display_model_id%22%3A184410599343%2C%22model_selection_logic%22%3A3%7D"
@@ -324,7 +324,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Square Shaped Moissanite Ring",
     details: "0.5 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM362.67",
+    price: "$90.67",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul6-lixx5gq6wrba3d.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Square-Shaped-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-i.865633567.22347530305?extraParams=%7B%22display_model_id%22%3A59325258121%2C%22model_selection_logic%22%3A3%7D"
@@ -332,7 +332,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Adeline Oval Shaped Moissanite",
     details: "1 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM428.67",
+    price: "$107.17",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul1-livbuo874vnqfb.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Adeline-Oval-Shaped-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICATE-i.865633567.20481544902?extraParams=%7B%22display_model_id%22%3A231772960618%2C%22model_selection_logic%22%3A3%7D"
@@ -340,7 +340,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Ross and Rachel Couple Moissanite",
     details: "0.01 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM428.67",
+    price: "$107.17",
     image:
       "https://down-my.img.susercontent.com/file/my-11134201-7qukw-liwry0k6p5xi54.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Ross-and-Rachel-Couple-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICAT-i.865633567.16195233855?extraParams=%7B%22display_model_id%22%3A214412391912%2C%22model_selection_logic%22%3A3%7D"
@@ -348,7 +348,7 @@ export const rings: JewelryItem[] = [
   {
     name: "Meera Silver Moissanite Ring",
     details: "0.01 CT, VVS 1, Color Grade D, White Gold 18K Plated",
-    price: "RM461.67",
+    price: "$115.42",
     image:
       "https://down-my.img.susercontent.com/file/my-11134207-7qul1-livbuo86v1om99.webp",
     url: "https://shopee.com.my/Lore-Jewellery-Meera-Silver-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICATE-i.865633567.18590516245?extraParams=%7B%22display_model_id%22%3A206859899830%2C%22model_selection_logic%22%3A3%7D"
@@ -508,29 +508,60 @@ export const starterProducts: JewelryItem[] = [
   {
     name: "Aurora Moissanite Ring",
     details: "0.5 CT VVS 1, Color Grade D, 925 Sterling Silver",
-    price: "RM98.67",
+    price: "$24.67",
     image: "/images/best-seller/Start Product 1.jpg",
     url: "#"
   },
   {
     name: "Luna Moissanite Necklace",
     details: "1 CT VVS 1, Color Grade D, 925 Sterling Silver",
-    price: "RM128.67",
+    price: "$32.17",
     image: "/images/best-seller/Start Product 2.jpg",
     url: "#"
   },
   {
     name: "Elysian Moissanite Bracelet",
     details: "0.8 CT VVS 1, Color Grade D, 925 Sterling Silver",
-    price: "RM148.67",
+    price: "$37.17",
     image: "/images/best-seller/Start Product 3.jpg",
     url: "#"
   },
   {
     name: "Stella Moissanite Earrings",
     details: "0.6 CT VVS 1, Color Grade D, 925 Sterling Silver",
-    price: "RM112.67",
+    price: "$28.17",
     image: "/images/best-seller/Start Product 4.jpg",
+    url: "#"
+  }
+];
+
+export const newCollection: JewelryItem[] = [
+  {
+    name: "Celestia Moissanite Ring",
+    details: "1 CT VVS 1, Color Grade D, 18K White Gold Plated",
+    price: "$48.17",
+    image: "/images/new-collection/New collection 1.jpg",
+    url: "#"
+  },
+  {
+    name: "Aria Moissanite Necklace",
+    details: "0.8 CT VVS 1, Color Grade D, 18K White Gold Plated",
+    price: "$42.17",
+    image: "/images/new-collection/New collection 1.2.jpg",
+    url: "#"
+  },
+  {
+    name: "Soleil Moissanite Earrings",
+    details: "0.6 CT VVS 1, Color Grade D, 18K White Gold Plated",
+    price: "$36.17",
+    image: "/images/new-collection/New collection 1.3.jpg",
+    url: "#"
+  },
+  {
+    name: "Vesper Moissanite Bracelet",
+    details: "0.8 CT VVS 1, Color Grade D, 18K White Gold Plated",
+    price: "$44.17",
+    image: "/images/new-collection/new collection 1.5.jpg",
     url: "#"
   }
 ];
@@ -541,7 +572,7 @@ export const earrings: JewelryItem[] = [
     details: "0.01 CT VVS 1 Color Grade D, White Gold 18K Plated",
     image:
       "https://down-my.img.susercontent.com/file/my-11134201-7qukw-lidvb9xh885i1c.webp",
-    price: "RM557.34",
+    price: "$139.34",
     url: "https://shopee.com.my/Lore-Jewellery-Flower-Pearl-Moissanite-0.01-CT-VVS-1-Color-Grade-D-Earrings-White-Gold-18K-Plated-i.865633567.14497615881?extraParams=%7B%22display_model_id%22%3A49668092976%2C%22model_selection_logic%22%3A3%7D"
   },
   {
@@ -550,7 +581,7 @@ export const earrings: JewelryItem[] = [
       "0.5 CT VVS 1 Color Grade D, 18K White Gold / GRA INTERNATIONAL CERTIFICATE",
     image:
       "https://down-my.img.susercontent.com/file/my-11134201-7qula-lidvb8sovwwzd6.webp",
-    price: "RM323.38",
+    price: "$80.85",
     url: "https://shopee.com.my/Lore-Jewellery-Snowflakes-Moissanite-0.5-CT-VVS-1-Color-Grade-D-Earring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICATE-i.865633567.15398930100?extraParams=%7B%22display_model_id%22%3A167703394165%2C%22model_selection_logic%22%3A3%7D"
   }
 ];

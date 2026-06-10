@@ -21,102 +21,6 @@ function TikTokIcon({ className }: { className?: string }) {
 export function FooterSections() {
   return (
     <>
-      {/* Information Row */}
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16">
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.3em] text-gray-400 mb-3">
-                News & Updates
-              </p>
-
-              <h2 className="text-3xl lg:text-4xl font-light tracking-tight text-gray-900">
-                Information
-              </h2>
-            </div>
-
-            <a
-              href="#"
-              className="group mt-6 lg:mt-0 inline-flex items-center text-sm tracking-[0.15em] uppercase text-gray-500 hover:text-black transition-colors"
-            >
-              View All Information
-              <span className="ml-3 group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </a>
-          </div>
-
-          {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {[
-              {
-                date: "2026.05.28 | Latest Information",
-                title: "LORE JEWELRY Kuala Lumpur Jun 12, 2026 Fri. New Open!",
-                img: "/lore-jewelry-logo.jpeg"
-              },
-              {
-                date: "2026.05.15 | Press Release",
-                title: "Announcement on Moissanite Product Line Quality",
-                outline: true
-              },
-              {
-                date: "2026.04.11 | Press Release",
-                title:
-                  "LORE REVAMPS BRAND IDENTITY, DEBUTING NEW RETAIL DESIGN IN MALAYSIA",
-                outline: true
-              }
-            ].map((item, i) => (
-              <article key={i} className="group cursor-pointer">
-                {/* Image */}
-                <div className="aspect-[16/10] overflow-hidden bg-[#f5f5f5] mb-6 relative">
-                  {item.outline ? (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#efefef] group-hover:bg-[#e9e9e9] transition-colors">
-                      <div className="w-14 h-7 border border-gray-400 rounded-sm flex items-center justify-center mb-3">
-                        <div className="w-2 h-2 rounded-full border border-gray-400 mx-1"></div>
-                        <div className="w-2 h-2 rounded-full border border-gray-400 mx-1"></div>
-                      </div>
-
-                      <span className="text-[11px] tracking-[0.3em] text-gray-500 uppercase">
-                        LORE
-                      </span>
-                    </div>
-                  ) : (
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  )}
-
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-                </div>
-
-                {/* Meta */}
-                <p className="text-[11px] uppercase tracking-[0.18em] text-gray-400 mb-3">
-                  {item.date}
-                </p>
-
-                {/* Title */}
-                <h3 className="text-lg font-medium leading-relaxed text-gray-900 group-hover:text-black transition-colors">
-                  {item.title}
-                </h3>
-
-                {/* Read More */}
-                <div className="mt-6 flex items-center text-sm text-gray-500 group-hover:text-black transition-colors">
-                  <span>Read More</span>
-
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">
-                    →
-                  </span>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Map / Shops Section */}
       <section className="bg-white relative flex justify-center mt-20 mb-32">
         <div className="absolute inset-0 pointer-events-none flex items-center justify-center top-[-100px]">
@@ -425,8 +329,6 @@ export function FooterSections() {
                 </p>
 
                 <div className="flex flex-col md:flex-row md:items-center text-sm text-gray-500">
-                  <span>Malaysia</span>
-                  <span className="hidden md:block mx-3 text-gray-700">|</span>
                   <span>English</span>
                 </div>
               </div>
