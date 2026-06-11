@@ -540,7 +540,7 @@ export const newCollection: JewelryItem[] = [
     name: "Celestia Moissanite Ring",
     details: "1 CT VVS 1, Color Grade D, 18K White Gold Plated",
     price: "$48.17",
-    image: "/images/new-collection/New collection 1.jpg",
+    image: "/images/new-collection/New collection 1.3.jpg ",
     url: "#"
   },
   {
@@ -554,7 +554,7 @@ export const newCollection: JewelryItem[] = [
     name: "Soleil Moissanite Earrings",
     details: "0.6 CT VVS 1, Color Grade D, 18K White Gold Plated",
     price: "$36.17",
-    image: "/images/new-collection/New collection 1.3.jpg",
+    image: "/images/new-collection/New collection 1.jpg ",
     url: "#"
   },
   {
