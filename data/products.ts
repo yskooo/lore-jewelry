@@ -506,7 +506,7 @@ export const newArrivals = [
 
 export const starterProducts: JewelryItem[] = [
   {
-    name: "Aurora Moissanite Ring",
+    name: "Aurora Moissanite Earrings",
     details: "0.5 CT VVS 1, Color Grade D, 925 Sterling Silver",
     price: "$24.67",
     image: "/images/best-seller/Start Product 1.jpg",
@@ -527,7 +527,7 @@ export const starterProducts: JewelryItem[] = [
     url: "#"
   },
   {
-    name: "Stella Moissanite Earrings",
+    name: "Stella Moissanite Ring",
     details: "0.6 CT VVS 1, Color Grade D, 925 Sterling Silver",
     price: "$28.17",
     image: "/images/best-seller/Start Product 4.jpg",
@@ -537,10 +537,10 @@ export const starterProducts: JewelryItem[] = [
 
 export const newCollection: JewelryItem[] = [
   {
-    name: "Celestia Moissanite Ring",
+    name: "Celestia Moissanite Necklace",
     details: "1 CT VVS 1, Color Grade D, 18K White Gold Plated",
     price: "$48.17",
-    image: "/images/new-collection/New collection 1.jpg",
+    image: "/images/new-collection/New collection 1.3.jpg",
     url: "#"
   },
   {
@@ -554,11 +554,11 @@ export const newCollection: JewelryItem[] = [
     name: "Soleil Moissanite Earrings",
     details: "0.6 CT VVS 1, Color Grade D, 18K White Gold Plated",
     price: "$36.17",
-    image: "/images/new-collection/New collection 1.3.jpg",
+    image: "/images/new-collection/New collection 1.jpg ",
     url: "#"
   },
   {
-    name: "Vesper Moissanite Bracelet",
+    name: "Vesper Moissanite Earrings",
     details: "0.8 CT VVS 1, Color Grade D, 18K White Gold Plated",
     price: "$44.17",
     image: "/images/new-collection/new collection 1.5.jpg",

@@ -2,6 +2,7 @@
 import { Crown } from "lucide-react";
 import React, { useState } from "react";
 import { products, newArrivals } from "../data/products";
+import { socialLinks } from "../data/site";
 export function ProductShowcase() {
   const [activeTab, setActiveTab] = useState<"bestsellers" | "new">(
     "bestsellers"
@@ -92,10 +93,15 @@ export function ProductShowcase() {
         {activeTab === "bestsellers" && (
           <div className="mt-16 text-center">
             {" "}
-            <button className="border border-gray-300 text-gray-800 hover:border-black transition-all px-16 py-3 text-[11px] font-bold tracking-[0.1em] uppercase">
+            <a
+              href={socialLinks.tiktok}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block border border-gray-300 text-gray-800 hover:border-black transition-all px-16 py-3 text-[11px] font-bold tracking-[0.1em] uppercase"
+            >
               {" "}
-              See Bestseller Ranking{" "}
-            </button>{" "}
+              Shop on TikTok Shop{" "}
+            </a>{" "}
           </div>
         )}{" "}
       </div>{" "}

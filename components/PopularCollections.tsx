@@ -116,12 +116,12 @@ export function PopularCollections() {
           ))}
         </div>
 
-        {/* CTA spacing + refinement */}
+        {/* CTA spacing + refinement
         <div className="text-center">
           <button className="border border-gray-300 text-[11px] text-gray-700 font-semibold uppercase tracking-[0.25em] px-16 py-4 hover:border-black hover:text-black transition-all duration-300 bg-white">
             View More
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
