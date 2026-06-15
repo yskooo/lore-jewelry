@@ -236,7 +236,7 @@ export function Bestsellers() {
 
         <div className="text-center">
           <button
-            className={`${raleway.className} uppercase border-2 border-gray-900 text-xs font-semibold tracking-wider px-12 py-3 hover:bg-gray-800 hover:text-white transition-all duration-300`}
+            className={`${raleway.className} cursor-pointer uppercase border-2 border-gray-900 text-xs font-semibold tracking-wider px-12 py-3 hover:bg-gray-800 hover:text-white transition-all duration-300`}
             onClick={() => {
               document
                 .getElementById("bestsellers")
