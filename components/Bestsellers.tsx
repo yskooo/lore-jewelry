@@ -3,7 +3,7 @@ import React, { useMemo, useState } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { earrings, rings, menRings, bands, necklaces, bracelets, artificialGemstone } from "../data/products";
 import Image from "next/image";
-import { cinzel, raleway } from "../utils/fonts";
+import { montserrat, raleway } from "../utils/fonts";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -85,7 +85,7 @@ export function Bestsellers() {
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`${cinzel.className} cursor-pointer pb-4 text-[12px] md:text-sm font-semibold tracking-wide relative px-2 shrink-0 ${
+              className={`${montserrat.className} cursor-pointer pb-4 text-[12px] md:text-sm font-semibold tracking-wide relative px-2 shrink-0 ${
                 activeTab === tab
                   ? "text-black"
                   : "text-gray-400 hover:text-gray-600"
@@ -183,7 +183,7 @@ export function Bestsellers() {
                   </h3>
                   {priceLabel && (
                     <p
-                      className={`${cinzel.className} text-base text-gray-800 font-semibold tracking-wide`}
+                      className={`${montserrat.className} text-base text-gray-800 font-semibold tracking-wide`}
                     >
                       {priceLabel}
                     </p>
@@ -213,7 +213,7 @@ export function Bestsellers() {
               <button
                 key={page}
                 onClick={() => setCurrentPage(page)}
-                className={`${cinzel.className} w-8 h-8 text-xs font-semibold tracking-wider border transition-all duration-200 ${
+                className={`${montserrat.className} w-8 h-8 text-xs font-semibold tracking-wider border transition-all duration-200 ${
                   currentPage === page
                     ? "bg-gray-900 text-white border-gray-900"
                     : "text-gray-500 border-gray-300 hover:border-gray-900 hover:text-gray-900"

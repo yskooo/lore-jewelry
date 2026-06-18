@@ -2,7 +2,7 @@
 import React from "react";
 import { Header } from "../../components/Header";
 import { FooterSections } from "../../components/FooterSections";
-import { cinzel, raleway } from "../../utils/fonts";
+import { montserrat, raleway } from "../../utils/fonts";
 
 const highlights = [
   { value: "925", label: "Sterling Silver" },
@@ -67,7 +67,7 @@ export default function About() {
             Mother of Moissanite
           </p>
           <h1
-            className={`${cinzel.className} text-3xl md:text-6xl font-bold tracking-widest text-gray-900`}
+            className={`${montserrat.className} text-3xl md:text-6xl font-bold tracking-widest text-gray-900`}
           >
             ABOUT LORE JEWELRY
           </h1>
@@ -110,7 +110,7 @@ export default function About() {
             </div>
 
             <blockquote
-              className={`${cinzel.className} mt-12 text-center text-xl md:text-2xl text-gray-900 italic tracking-wide leading-relaxed`}
+              className={`${montserrat.className} mt-12 text-center text-xl md:text-2xl text-gray-900 italic tracking-wide leading-relaxed`}
             >
               “To bring eternal starlight brilliance into everyday life.”
             </blockquote>
@@ -135,7 +135,7 @@ export default function About() {
                 className="bg-white flex flex-col items-center justify-center text-center py-10 px-4"
               >
                 <span
-                  className={`${cinzel.className} text-3xl md:text-4xl font-bold text-gray-900`}
+                  className={`${montserrat.className} text-3xl md:text-4xl font-bold text-gray-900`}
                 >
                   {item.value}
                 </span>
@@ -153,7 +153,7 @@ export default function About() {
         <section className="container mx-auto px-4 pb-16 md:pb-24">
           <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
             <h2
-              className={`${cinzel.className} text-2xl md:text-3xl font-semibold tracking-wide text-gray-900`}
+              className={`${montserrat.className} text-2xl md:text-3xl font-semibold tracking-wide text-gray-900`}
             >
               Materials &amp; Craftsmanship
             </h2>
@@ -164,7 +164,7 @@ export default function About() {
             {materials.map((item) => (
               <div key={item.title} className="bg-white p-8 md:p-10">
                 <h3
-                  className={`${cinzel.className} text-lg md:text-xl font-semibold tracking-wide text-gray-900 mb-4`}
+                  className={`${montserrat.className} text-lg md:text-xl font-semibold tracking-wide text-gray-900 mb-4`}
                 >
                   {item.title}
                 </h3>
@@ -199,7 +199,7 @@ export default function About() {
                 </div>
                 <div className="w-full md:w-1/2 text-center md:text-left">
                   <h2
-                    className={`${cinzel.className} text-xl md:text-3xl font-semibold tracking-wide text-gray-900 mb-5`}
+                    className={`${montserrat.className} text-xl md:text-3xl font-semibold tracking-wide text-gray-900 mb-5`}
                   >
                     {item.title}
                   </h2>

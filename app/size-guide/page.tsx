@@ -1,4 +1,4 @@
-﻿import { Header } from "@/components/Header";
+import { Header } from "@/components/Header";
 import SizeGuideClient from "./SizeGuideClient";
 import { FooterSections } from "@/components/FooterSections";
 

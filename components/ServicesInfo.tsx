@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Cinzel, Raleway } from "next/font/google";
+import { Montserrat, Raleway } from "next/font/google";
 
-const cinzel = Cinzel({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"]
 });
@@ -36,7 +36,7 @@ export function ServicesInfo() {
           {/* LEFT: Content (moved here) */}
           <div>
             <h2
-              className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl font-medium tracking-wider text-gray-900`}
+              className={`${montserrat.className} text-3xl sm:text-4xl md:text-5xl font-medium tracking-wider text-gray-900`}
             >
               Jewelry Services
             </h2>
@@ -59,7 +59,7 @@ export function ServicesInfo() {
 
                 <div className="mt-4">
                   <span
-                    className={`${cinzel.className} text-2xl sm:text-3xl font-semibold text-gray-900`}
+                    className={`${montserrat.className} text-2xl sm:text-3xl font-semibold text-gray-900`}
                   >
                     $0
                   </span>
@@ -76,7 +76,7 @@ export function ServicesInfo() {
                   </span>
 
                   <span
-                    className={`${cinzel.className} text-2xl sm:text-3xl font-semibold text-gray-900`}
+                    className={`${montserrat.className} text-2xl sm:text-3xl font-semibold text-gray-900`}
                   >
                     24
                   </span>
@@ -104,7 +104,7 @@ export function ServicesInfo() {
                 </p>
 
                 <span
-                  className={`${cinzel.className} text-2xl sm:text-3xl font-semibold text-gray-900`}
+                  className={`${montserrat.className} text-2xl sm:text-3xl font-semibold text-gray-900`}
                 >
                   $37.50+
                 </span>

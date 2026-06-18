@@ -3,7 +3,7 @@ import { Heart, Search, Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
-import { cinzel, raleway } from "../utils/fonts";
+import { montserrat, raleway } from "../utils/fonts";
 import { categories, socialLinks } from "../data/site";
 
 // This version of lucide-react has no Instagram/TikTok glyph, so we inline them.
@@ -60,7 +60,7 @@ export function Header() {
                 {categories.map((section) => (
                   <div key={section.title} className="min-w-[160px]">
                     <p
-                      className={`${cinzel.className} text-xs font-bold uppercase tracking-[0.2em] text-gray-900 mb-4`}
+                      className={`${montserrat.className} text-xs font-bold uppercase tracking-[0.2em] text-gray-900 mb-4`}
                     >
                       {section.title}
                     </p>
@@ -154,7 +154,7 @@ export function Header() {
             {categories.map((section) => (
               <div key={section.title}>
                 <p
-                  className={`${cinzel.className} text-xs font-bold uppercase tracking-[0.2em] text-gray-900 mb-3`}
+                  className={`${montserrat.className} text-xs font-bold uppercase tracking-[0.2em] text-gray-900 mb-3`}
                 >
                   {section.title}
                 </p>

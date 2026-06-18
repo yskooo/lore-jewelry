@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { socialLinks } from "../data/site";
-import { cinzel, raleway } from "../utils/fonts";
+import { montserrat, raleway } from "../utils/fonts";
 function InstagramIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -35,7 +35,7 @@ export function FooterSections() {
 
         <div className="w-[90%] max-w-[600px] relative z-10 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
           <div className="p-6 md:p-16 flex flex-col justify-center">
-            <h3 className={`${cinzel.className} text-2xl font-normal mb-8 tracking-widest uppercase`}>
+            <h3 className={`${montserrat.className} text-2xl font-normal mb-8 tracking-widest uppercase`}>
               Our Boutiques
             </h3>
             <p className={`${raleway.className} text-sm text-gray-600 mb-10 leading-relaxed max-w-[400px]`}>
@@ -45,7 +45,7 @@ export function FooterSections() {
               <span className={`${raleway.className} text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-2`}>
                 Store Locator
               </span>
-              <span className={`${cinzel.className} text-lg tracking-widest text-black uppercase`}>
+              <span className={`${montserrat.className} text-lg tracking-widest text-black uppercase`}>
                 Coming Soon
               </span>
             </div>

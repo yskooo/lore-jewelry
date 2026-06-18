@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "../../components/Header";
 import { FooterSections } from "../../components/FooterSections";
-import { cinzel, raleway } from "../../utils/fonts";
+import { montserrat, raleway } from "../../utils/fonts";
 
 export const metadata: Metadata = {
   title: "FAQs | Lore Jewelry",
@@ -38,7 +38,7 @@ export default function FAQ() {
       <Header />
       <main className="flex-grow container w-full mx-auto px-4 py-12 md:py-20 flex flex-col items-center">
         <h1
-          className={`${cinzel.className} text-3xl md:text-5xl font-bold tracking-widest text-center text-gray-900 mb-4`}
+          className={`${montserrat.className} text-3xl md:text-5xl font-bold tracking-widest text-center text-gray-900 mb-4`}
         >
           FREQUENTLY ASKED QUESTIONS
         </h1>
@@ -54,7 +54,7 @@ export default function FAQ() {
             <details key={faq.question} className="group py-6">
               <summary className="flex cursor-pointer items-center justify-between gap-4 list-none">
                 <span
-                  className={`${cinzel.className} text-base md:text-lg font-semibold tracking-wide text-gray-900`}
+                  className={`${montserrat.className} text-base md:text-lg font-semibold tracking-wide text-gray-900`}
                 >
                   {faq.question}
                 </span>

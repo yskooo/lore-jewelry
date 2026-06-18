@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "../../components/Header";
 import { FooterSections } from "../../components/FooterSections";
-import { cinzel, raleway } from "../../utils/fonts";
+import { montserrat, raleway } from "../../utils/fonts";
 
 export const metadata: Metadata = {
   title: "After-Sales Service | Lore Jewelry",
@@ -27,7 +27,7 @@ export default function AfterSales() {
       <Header />
       <main className="flex-grow container w-full mx-auto px-4 py-12 md:py-20 flex flex-col items-center">
         <h1
-          className={`${cinzel.className} text-3xl md:text-5xl font-bold tracking-widest text-center text-gray-900 mb-4`}
+          className={`${montserrat.className} text-3xl md:text-5xl font-bold tracking-widest text-center text-gray-900 mb-4`}
         >
           AFTER-SALES SERVICE
         </h1>
@@ -45,13 +45,13 @@ export default function AfterSales() {
               className="flex gap-6 border-b border-gray-200 pb-8"
             >
               <span
-                className={`${cinzel.className} text-3xl font-bold text-gray-300 leading-none`}
+                className={`${montserrat.className} text-3xl font-bold text-gray-300 leading-none`}
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div>
                 <h2
-                  className={`${cinzel.className} text-lg md:text-xl font-semibold tracking-wide text-gray-900 mb-2`}
+                  className={`${montserrat.className} text-lg md:text-xl font-semibold tracking-wide text-gray-900 mb-2`}
                 >
                   {policy.title}
                 </h2>
