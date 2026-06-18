@@ -58,14 +58,14 @@ export const categories: CategorySection[] = [
         href: "/?tab=Men's Ring#bestsellers",
         items: [
           { label: "Men's Rings", href: "/?tab=Men's Ring#bestsellers" },
-          { label: "Men's Bands", href: "/?tab=Men's Ring#bestsellers" }
+          // { label: "Men's Bands", href: "/?tab=Men's Ring#bestsellers" }
         ]
       },
       {
         label: "Collections",
         href: "/#bestsellers",
         items: [
-          { label: "New Arrivals", href: "/#bestsellers" }
+          { label: "New Arrivals", href: "/#new-collection" }
         ]
       }
     ]

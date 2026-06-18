@@ -3,6 +3,7 @@ import { Crown } from "lucide-react";
 import React, { useState } from "react";
 import { products, newArrivals } from "../data/products";
 import { socialLinks } from "../data/site";
+import { formatPriceUSD } from "../utils/currency";
 export function ProductShowcase() {
   const [activeTab, setActiveTab] = useState<"bestsellers" | "new">(
     "bestsellers"
@@ -84,7 +85,7 @@ export function ProductShowcase() {
                   {item.material}
                 </p>{" "}
                 <p className="text-[11px] text-gray-500 tracking-wider">
-                  RM {item.price.toFixed(2)}
+                  {formatPriceUSD(item.price)}
                 </p>{" "}
               </div>{" "}
             </div>

@@ -4,6 +4,7 @@ import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { earrings, rings, menRings, bands, necklaces, bracelets, artificialGemstone } from "../data/products";
 import Image from "next/image";
 import { montserrat, raleway } from "../utils/fonts";
+import { formatPriceUSD } from "../utils/currency";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -144,12 +145,7 @@ export function Bestsellers() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {paginatedItems.map((item, index) => {
-            const priceLabel =
-              item.price == null
-                ? null
-                : typeof item.price === "number"
-                  ? `RM ${item.price.toFixed(2)}`
-                  : item.price;
+            const priceLabel = formatPriceUSD(item.price);
             const key = "id" in item ? item.id : `${item.name}-${index}`;
             const materialLabel =
               "material" in item ? item.material : "LORE | MOISSANITE";

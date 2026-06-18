@@ -1,6 +1,7 @@
 import React from "react";
 import { necklaces } from "../data/products";
 import { montserrat, raleway } from "../utils/fonts";
+import { formatPriceUSD } from "../utils/currency";
 
 export function NecklacesShowcase() {
   // Let's take the first 4 or 8 items from necklaces
@@ -57,7 +58,7 @@ export function NecklacesShowcase() {
 
                 <div className="mt-4 pt-4 border-t border-zinc-100">
                   <p className={`${raleway.className} text-xs font-medium tracking-widest text-gray-500`}>
-                    USD ${typeof item.price === 'number' ? item.price.toFixed(2) : item.price}
+                    {formatPriceUSD(item.price)}
                   </p>
                 </div>
               </div>

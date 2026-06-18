@@ -111,11 +111,11 @@ export function FooterSections() {
           <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-10 xl:gap-x-16 gap-y-14 mb-24">
             {/* Products */}
             <div>
-              <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] mb-6 text-white">
+              <h4 className={`${montserrat.className} text-xs font-semibold uppercase tracking-[0.25em] mb-8 text-white`}>
                 PRODUCTS
               </h4>
 
-              <ul className="space-y-3 text-sm text-gray-400">
+              <ul className={`${raleway.className} space-y-4 text-[13px] md:text-sm tracking-wide text-gray-400`}>
                 <li>
                   <Link
                     href="/?tab=Ring#bestsellers"
@@ -174,11 +174,11 @@ export function FooterSections() {
 
             {/* Purchase */}
             <div>
-              <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] mb-6 text-white">
+              <h4 className={`${montserrat.className} text-xs font-semibold uppercase tracking-[0.25em] mb-8 text-white`}>
                 PURCHASE
               </h4>
 
-              <ul className="space-y-3 text-sm text-gray-400">
+              <ul className={`${raleway.className} space-y-4 text-[13px] md:text-sm tracking-wide text-gray-400`}>
                 <li>
                   <Link
                     href="/after-sales"
@@ -189,23 +189,23 @@ export function FooterSections() {
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/size-guide"
                     className="hover:text-white transition-colors duration-300"
                   >
                     Size Guide
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
             {/* About */}
             <div>
-              <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] mb-6 text-white">
+              <h4 className={`${montserrat.className} text-xs font-semibold uppercase tracking-[0.25em] mb-8 text-white`}>
                 ABOUT
               </h4>
 
-              <ul className="space-y-3 text-sm text-gray-400">
+              <ul className={`${raleway.className} space-y-4 text-[13px] md:text-sm tracking-wide text-gray-400`}>
                 <li>
                   <Link
                     href="/about"
@@ -216,12 +216,12 @@ export function FooterSections() {
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/#bestsellers"
                     className="hover:text-white transition-colors duration-300"
                   >
                     Shops
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
@@ -237,11 +237,11 @@ export function FooterSections() {
 
             {/* Support */}
             <div>
-              <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] mb-6 text-white">
+              <h4 className={`${montserrat.className} text-xs font-semibold uppercase tracking-[0.25em] mb-8 text-white`}>
                 SUPPORT
               </h4>
 
-              <ul className="space-y-3 text-sm text-gray-400">
+              <ul className={`${raleway.className} space-y-4 text-[13px] md:text-sm tracking-wide text-gray-400`}>
                 <li>
                   <Link
                     href="/faq"
@@ -286,17 +286,17 @@ export function FooterSections() {
 
             {/* Contact */}
             <div className="col-span-2 lg:col-span-2 lg:border-l lg:border-white/10 lg:pl-12">
-              <h4 className="text-[11px] font-semibold uppercase tracking-[0.25em] mb-6 text-white">
+              <h4 className={`${montserrat.className} text-xs font-semibold uppercase tracking-[0.25em] mb-8 text-white`}>
                 CONTACT US
               </h4>
 
-              <p className="text-3xl font-light tracking-[0.08em] text-white mb-4">
+              <p className={`${montserrat.className} text-3xl font-light tracking-[0.08em] text-white mb-4`}>
                 0917-701-6030
               </p>
 
-              <p className="text-sm text-gray-400 mb-2">Monday to Friday</p>
+              <p className={`${raleway.className} text-sm text-gray-400 mb-2`}>Monday to Friday</p>
 
-              <p className="text-sm text-gray-300 leading-relaxed">
+              <p className={`${raleway.className} text-[13px] md:text-sm tracking-wide text-gray-300 leading-relaxed`}>
                 Operating Hours 9:30 - 12:00 and 13:00 - 18:30
               </p>
             </div>

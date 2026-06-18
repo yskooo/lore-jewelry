@@ -1,6 +1,7 @@
 import React from "react";
 import { starterProducts } from "../data/products";
 import { montserrat, raleway } from "../utils/fonts";
+import { formatPriceUSD } from "../utils/currency";
 
 export function StarterProducts() {
   return (
@@ -55,7 +56,7 @@ export function StarterProducts() {
 
                 <div className="mt-4 pt-4 border-t border-zinc-100">
                   <p className={`${raleway.className} text-xs font-medium tracking-widest text-gray-500`}>
-                    {item.price}
+                    {formatPriceUSD(item.price)}
                   </p>
                 </div>
               </div>

@@ -1,10 +1,11 @@
 import React from "react";
 import { newCollection } from "../data/products";
 import { montserrat, raleway } from "../utils/fonts";
+import { formatPriceUSD } from "../utils/currency";
 
 export function NewCollection() {
   return (
-    <section className="py-32 bg-[#fafafa]">
+    <section id="new-collection" className="py-32 bg-[#fafafa]">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -55,7 +56,7 @@ export function NewCollection() {
 
                 <div className="mt-4 pt-4 border-t border-zinc-100">
                   <p className={`${raleway.className} text-xs font-medium tracking-widest text-gray-500`}>
-                    {item.price}
+                    {formatPriceUSD(item.price)}
                   </p>
                 </div>
               </div>

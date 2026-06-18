@@ -40,7 +40,7 @@ export function Header() {
             alt="Lore Jewelry Logo"
             width={2400}
             height={100}
-            className="object-contain p-6 sm:p-4 h-20 md:h-28 w-auto mix-blend-multiply"
+            className="object-contain py-2 px-1 sm:p-4 h-24 md:h-28 w-auto mix-blend-multiply"
             priority
           />
         </Link>
@@ -49,9 +49,9 @@ export function Header() {
           {/* Shop mega-menu */}
           <div className="relative group">
             <button
-              className={`${raleway.className} flex items-center gap-1 text-[14px] font-semibold tracking-widest text-gray-800 hover:text-gray-500 transition-colors`}
+              className={`${montserrat.className} flex items-center gap-1 text-[11px] font-semibold tracking-[0.2em] uppercase text-gray-900 hover:text-gray-500 transition-colors`}
             >
-              Shop
+              SHOP
               <ChevronDown className="w-4 h-4 stroke-[1.5] transition-transform group-hover:rotate-180" />
             </button>
 
@@ -102,7 +102,7 @@ export function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className={`${raleway.className} text-[14px] font-semibold tracking-widest text-gray-800 hover:text-gray-500 transition-colors`}
+              className={`${montserrat.className} text-[11px] font-semibold tracking-[0.2em] uppercase text-gray-900 hover:text-gray-500 transition-colors`}
             >
               {item.label}
             </Link>
