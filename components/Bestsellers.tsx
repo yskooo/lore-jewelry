@@ -192,7 +192,7 @@ export function Bestsellers() {
 
         {/* Pagination */}
         {hasPagination && totalPages > 1 && (
-          <div className="flex justify-center items-center gap-2 mb-14">
+          <div className="flex flex-wrap justify-center items-center gap-2 mb-14 px-4">
             <button
               onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
               disabled={currentPage === 1}
