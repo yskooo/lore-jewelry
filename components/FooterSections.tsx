@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { socialLinks } from "../data/site";
+import { cinzel, raleway } from "../utils/fonts";
 function InstagramIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -33,39 +35,20 @@ export function FooterSections() {
 
         <div className="w-[90%] max-w-[600px] relative z-10 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
           <div className="p-6 md:p-16 flex flex-col justify-center">
-            <h3 className="text-2xl font-normal mb-8 tracking-wide">Shops</h3>
-            <p className="text-sm text-gray-600 mb-10 leading-relaxed max-w-[400px]">
-              With physical locations in Malaysia, LORE is committed to bringing
-              the best ethical jewelry to customers around the world.
+            <h3 className={`${cinzel.className} text-2xl font-normal mb-8 tracking-widest uppercase`}>
+              Our Boutiques
+            </h3>
+            <p className={`${raleway.className} text-sm text-gray-600 mb-10 leading-relaxed max-w-[400px]`}>
+              Our New York flagship boutiques are currently undergoing a spectacular transformation. We are preparing to unveil an unparalleled, immersive fine jewelry experience.
             </p>
-            <div className="flex border border-gray-300 mb-4 h-12 overflow-hidden">
-              <div className="flex items-center px-2 md:px-4 text-gray-400">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  ></path>
-                </svg>
-              </div>
-              <input
-                type="text"
-                placeholder="Search"
-                className="flex-1 w-0 px-2 text-sm outline-none placeholder-gray-400 font-medium"
-              />
-              <button className="bg-[#2b2b2b] text-white px-4 md:px-8 text-sm font-bold tracking-wider hover:bg-black transition-colors shrink-0">
-                Search
-              </button>
+            <div className="border border-gray-300 py-6 flex flex-col items-center justify-center w-full bg-[#fafafa] transition-colors">
+              <span className={`${raleway.className} text-xs font-bold tracking-[0.2em] text-gray-400 uppercase mb-2`}>
+                Store Locator
+              </span>
+              <span className={`${cinzel.className} text-lg tracking-widest text-black uppercase`}>
+                Coming Soon
+              </span>
             </div>
-            <button className="border border-gray-300 text-sm font-bold tracking-widest px-8 py-3.5 hover:border-black hover:text-black transition-colors flex items-center justify-center w-full bg-white text-gray-600">
-              Store Locator
-            </button>
           </div>
         </div>
       </section>

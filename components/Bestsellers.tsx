@@ -1,7 +1,7 @@
 "use client";
 import React, { useMemo, useState } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
-import { earrings, rings } from "../data/products";
+import { earrings, rings, menRings, bands, necklaces, bracelets, artificialGemstone } from "../data/products";
 import Image from "next/image";
 import { cinzel, raleway } from "../utils/fonts";
 
@@ -15,7 +15,7 @@ const getNumericPrice = (price?: number | string | null) => {
 };
 
 export function Bestsellers() {
-  const tabs = ["All", "Ring", "Earrings"];
+  const tabs = ["All", "Ring", "Men's Ring", "Bands", "Earrings", "Necklace", "Bracelet", "Artificial"];
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -27,13 +27,16 @@ export function Bestsellers() {
   const [currentPage, setCurrentPage] = useState(1);
   const activeTab = tabs.includes(tabParam) ? tabParam : selectedTab;
 
-  const allItems = [...rings, ...earrings];
+  const allItems = [...rings, ...menRings, ...bands, ...earrings, ...necklaces, ...bracelets, ...artificialGemstone];
   const displayedItems =
-    activeTab === "Earrings"
-      ? earrings
-      : activeTab === "Ring"
-        ? rings
-        : allItems;
+    activeTab === "Earrings" ? earrings
+      : activeTab === "Ring" ? rings
+      : activeTab === "Men's Ring" ? menRings
+      : activeTab === "Bands" ? bands
+      : activeTab === "Necklace" ? necklaces
+      : activeTab === "Bracelet" ? bracelets
+      : activeTab === "Artificial" ? artificialGemstone
+      : allItems;
   const sortedItems = useMemo(() => {
     const items = [...displayedItems];
     if (sortOrder === "lowToHigh") {
@@ -78,11 +81,11 @@ export function Bestsellers() {
     <section id="bestsellers" className="pt-20 pb-14 bg-white">
       <div className="container mx-auto px-4">
         {/* Tabs */}
-        <div className="flex justify-around space-x-6 border-b border-gray-200 mb-4 whitespace-nowrap">
+        <div className="flex overflow-x-auto md:justify-center gap-6 border-b border-gray-200 mb-4 whitespace-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] px-1">
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`${cinzel.className} cursor-pointer pb-4 text-[12px] md:text-sm font-semibold tracking-wide relative px-2 ${
+              className={`${cinzel.className} cursor-pointer pb-4 text-[12px] md:text-sm font-semibold tracking-wide relative px-2 shrink-0 ${
                 activeTab === tab
                   ? "text-black"
                   : "text-gray-400 hover:text-gray-600"
@@ -91,7 +94,7 @@ export function Bestsellers() {
             >
               {tab}
               {activeTab === tab && (
-                <div className="absolute -bottom-px left-0 w-full h-0.75 bg-black"></div>
+                <div className="absolute -bottom-px left-0 w-full h-[2px] bg-black"></div>
               )}
             </button>
           ))}

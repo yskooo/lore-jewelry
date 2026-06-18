@@ -9,6 +9,8 @@ import { NewCollection } from "@/components/NewCollection";
 // import { SearchCategories } from "@/components/SearchCategories";
 import { PopularCollections } from "@/components/PopularCollections";
 import { FooterSections } from "@/components/FooterSections";
+import { NecklacesShowcase } from "@/components/NecklacesShowcase";
+import { BraceletsShowcase } from "@/components/BraceletsShowcase";
 
 export default function Home() {
   return (
@@ -19,7 +21,9 @@ export default function Home() {
         <Bestsellers />
       </Suspense>
       <StarterProducts />
+      <NecklacesShowcase />
       <NewCollection />
+      <BraceletsShowcase />
       <hr className="border-t border-gray-200 mx-20" />
       {/* <ServicesInfo /> */}
       {/* <LatestNews /> */}

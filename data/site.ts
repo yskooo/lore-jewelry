@@ -26,41 +26,48 @@ export const categories: CategorySection[] = [
     title: "Women",
     groups: [
       {
-        label: "Moissanite Rings",
+        label: "Rings & Bands",
         href: "/?tab=Ring#bestsellers",
         items: [
-          { label: "Round Cut", href: "/?tab=Ring#bestsellers" },
-          { label: "Oval Cut", href: "/?tab=Ring#bestsellers" },
-          { label: "Emerald Cut", href: "/?tab=Ring#bestsellers" },
-          { label: "Marquise Cut", href: "/?tab=Ring#bestsellers" },
-          { label: "Pear Cut", href: "/?tab=Ring#bestsellers" }
+          { label: "Moissanite Rings", href: "/?tab=Ring#bestsellers" },
+          { label: "Moissanite Bands", href: "/?tab=Bands#bestsellers" }
         ]
       },
-      { label: "Moissanite Bands", href: "/?tab=Ring#bestsellers" },
-      { label: "Moissanite Bracelet", href: "/#bestsellers" },
       {
-        label: "Moissanite Earrings",
+        label: "Earrings & Necklaces",
         href: "/?tab=Earrings#bestsellers",
         items: [
-          { label: "Studs", href: "/?tab=Earrings#bestsellers" },
-          { label: "Huggies", href: "/?tab=Earrings#bestsellers" },
-          { label: "Hanging", href: "/?tab=Earrings#bestsellers" }
+          { label: "Moissanite Earrings", href: "/?tab=Earrings#bestsellers" },
+          { label: "Moissanite Necklaces", href: "/?tab=Necklace#bestsellers" }
         ]
       },
       {
-        label: "Moissanite Necklace",
-        href: "/#bestsellers",
+        label: "Alternative Gemstones",
+        href: "/?tab=Artificial#bestsellers",
         items: [
-          { label: "Round Cut", href: "/#bestsellers" },
-          { label: "Oval Cut", href: "/#bestsellers" },
-          { label: "Emerald Cut", href: "/#bestsellers" }
+          { label: "Artificial Jewelry", href: "/?tab=Artificial#bestsellers" }
         ]
-      },
-      { label: "Artificial Gemstone Jewelry", href: "/#bestsellers" }
+      }
     ]
   },
   {
     title: "Men",
-    groups: [{ label: "Men's Ring", href: "/?tab=Ring#bestsellers" }]
+    groups: [
+      {
+        label: "Rings",
+        href: "/?tab=Men's Ring#bestsellers",
+        items: [
+          { label: "Men's Rings", href: "/?tab=Men's Ring#bestsellers" },
+          { label: "Men's Bands", href: "/?tab=Men's Ring#bestsellers" }
+        ]
+      },
+      {
+        label: "Collections",
+        href: "/#bestsellers",
+        items: [
+          { label: "New Arrivals", href: "/#bestsellers" }
+        ]
+      }
+    ]
   }
 ];

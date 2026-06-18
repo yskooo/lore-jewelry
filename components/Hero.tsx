@@ -2,7 +2,7 @@ import React from "react";
 
 export function Hero() {
   return (
-    <section className="relative w-full mt-16 bg-gray-50 flex items-center justify-center overflow-hidden h-[500px] md:h-[700px]">
+    <section className="relative w-full mt-16 bg-gray-50 flex items-center justify-center overflow-hidden w-full h-full">
       <video
         autoPlay
         muted

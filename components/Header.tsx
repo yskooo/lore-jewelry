@@ -64,18 +64,30 @@ export function Header() {
                     >
                       {section.title}
                     </p>
-                    <ul className="space-y-3">
+                    <div className="space-y-6">
                       {section.groups.map((group) => (
-                        <li key={group.label}>
-                          <Link
-                            href={group.href}
-                            className={`${raleway.className} block text-sm text-gray-600 hover:text-black transition-colors`}
-                          >
+                        <div key={group.label}>
+                          <p className={`${raleway.className} text-sm font-bold text-gray-900 mb-2`}>
                             {group.label}
-                          </Link>
-                        </li>
+                          </p>
+                          {group.items && (
+                            <ul className="space-y-2 mt-2">
+                              {group.items.map((item) => (
+                                <li key={item.label}>
+                                  <Link
+                                    href={item.href}
+                                    className={`${raleway.className} flex items-center text-[13px] text-gray-600 hover:text-black transition-colors`}
+                                  >
+                                    <span className="mr-2 text-gray-400">•</span>
+                                    {item.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -146,19 +158,31 @@ export function Header() {
                 >
                   {section.title}
                 </p>
-                <ul className="space-y-3 pl-1">
+                <div className="space-y-5 pl-1">
                   {section.groups.map((group) => (
-                    <li key={group.label}>
-                      <Link
-                        href={group.href}
-                        className={`${raleway.className} block text-sm text-gray-600 hover:text-black transition-colors`}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
+                    <div key={group.label}>
+                      <p className={`${raleway.className} text-sm font-bold text-gray-900 mb-2`}>
                         {group.label}
-                      </Link>
-                    </li>
+                      </p>
+                      {group.items && (
+                        <ul className="space-y-3 mt-2 pl-2 border-l border-gray-100">
+                          {group.items.map((item) => (
+                            <li key={item.label}>
+                              <Link
+                                href={item.href}
+                                className={`${raleway.className} flex items-center text-[13px] text-gray-600 hover:text-black transition-colors`}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                              >
+                                <span className="mr-2 text-gray-400">•</span>
+                                {item.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
 
