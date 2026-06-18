@@ -1,9 +1,10 @@
 import React from "react";
 import { starterProducts } from "../data/products";
+import { montserrat, raleway } from "../utils/fonts";
 
 export function StarterProducts() {
   return (
-    <section className="py-28 bg-white">
+    <section className="py-32 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -11,7 +12,7 @@ export function StarterProducts() {
             Starter Collection
           </p>
 
-          <h2 className="text-3xl md:text-4xl font-light tracking-tight text-slate-950 leading-snug">
+          <h2 className={`${montserrat.className} text-2xl md:text-3xl font-light tracking-[0.2em] uppercase text-gray-900 leading-snug`}>
             Essential moissanite pieces for modern elegance
           </h2>
 
@@ -48,12 +49,12 @@ export function StarterProducts() {
                   {item.details}
                 </p>
 
-                <h3 className="text-base md:text-lg font-medium tracking-wide text-slate-950">
+                <h3 className={`${montserrat.className} text-xs font-normal tracking-[0.15em] uppercase text-gray-700 min-h-[40px]`}>
                   {item.name}
                 </h3>
 
                 <div className="mt-4 pt-4 border-t border-zinc-100">
-                  <p className="text-sm font-semibold tracking-[0.2em] text-slate-900">
+                  <p className={`${raleway.className} text-xs font-medium tracking-widest text-gray-500`}>
                     {item.price}
                   </p>
                 </div>

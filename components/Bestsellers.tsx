@@ -78,14 +78,14 @@ export function Bestsellers() {
   };
 
   return (
-    <section id="bestsellers" className="pt-20 pb-14 bg-white">
+    <section id="bestsellers" className="pt-32 pb-32 bg-white">
       <div className="container mx-auto px-4">
         {/* Tabs */}
         <div className="flex overflow-x-auto md:justify-center gap-6 border-b border-gray-200 mb-4 whitespace-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] px-1">
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`${montserrat.className} cursor-pointer pb-4 text-[12px] md:text-sm font-semibold tracking-wide relative px-2 shrink-0 ${
+              className={`${montserrat.className} cursor-pointer pb-4 text-[11px] md:text-[12px] font-medium uppercase tracking-[0.2em] relative px-2 shrink-0 ${
                 activeTab === tab
                   ? "text-black"
                   : "text-gray-400 hover:text-gray-600"
@@ -172,18 +172,18 @@ export function Bestsellers() {
                   />
                 </div>
 
-                <div className="text-center mt-auto mb-7 w-full space-y-2">
+                <div className="text-center mt-12 mb-7 w-full space-y-3">
                   <p className="text-[10px] uppercase tracking-[0.3em] text-gray-400">
                     {materialLabel}
                   </p>
                   <h3
-                    className={`${raleway.className} text-sm font-medium uppercase tracking-widest text-gray-800`}
+                    className={`${montserrat.className} text-xs font-normal uppercase tracking-[0.15em] text-gray-700`}
                   >
                     {item.name}
                   </h3>
                   {priceLabel && (
                     <p
-                      className={`${montserrat.className} text-base text-gray-800 font-semibold tracking-wide`}
+                      className={`${raleway.className} text-xs text-gray-500 font-medium tracking-widest`}
                     >
                       {priceLabel}
                     </p>

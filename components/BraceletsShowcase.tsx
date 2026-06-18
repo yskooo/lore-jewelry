@@ -1,11 +1,12 @@
 import React from "react";
 import { bracelets } from "../data/products";
+import { montserrat, raleway } from "../utils/fonts";
 
 export function BraceletsShowcase() {
   const displayItems = bracelets.slice(0, 4);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-32 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -13,7 +14,7 @@ export function BraceletsShowcase() {
             Featured Collection
           </p>
 
-          <h2 className="text-3xl md:text-4xl font-light tracking-tight text-slate-950 leading-snug">
+          <h2 className={`${montserrat.className} text-2xl md:text-3xl font-light tracking-[0.2em] uppercase text-gray-900 leading-snug`}>
             Elegant Bracelets
           </h2>
 
@@ -49,12 +50,12 @@ export function BraceletsShowcase() {
                   {item.material}
                 </p>
 
-                <h3 className="text-sm font-medium tracking-wide text-slate-950 min-h-[40px]">
+                <h3 className={`${montserrat.className} text-xs font-normal tracking-[0.15em] uppercase text-gray-700 min-h-[40px]`}>
                   {item.name}
                 </h3>
 
                 <div className="mt-4 pt-4">
-                  <p className="text-sm font-semibold tracking-[0.2em] text-slate-900">
+                  <p className={`${raleway.className} text-xs font-medium tracking-widest text-gray-500`}>
                     USD ${typeof item.price === 'number' ? item.price.toFixed(2) : item.price}
                   </p>
                 </div>

@@ -1,87 +1,56 @@
 import React from "react";
+import { montserrat, raleway } from "../utils/fonts";
 
 export function PopularCollections() {
   const popularCollections = [
     {
-      name: "Meera Silver Moissanite Ring",
-      details:
-        "VVS 1 Color Grade D, 18K White Gold / GRA INTERNATIONAL CERTIFICATE",
-      image:
-        "https://down-my.img.susercontent.com/file/my-11134207-7qul1-livbuo86v1om99.webp",
-      price: "$115.42",
-      url: "https://shopee.com.my/Lore-Jewellery-Meera-Silver-Moissanite-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICATE-i.865633567.18590516245?extraParams=%7B%22display_model_id%22%3A206859899830%2C%22model_selection_logic%22%3A3%7D"
+      name: "Crescent Star Moissanite Ring S925 0.5 CT",
+      image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/321ff2c52c6548edb53fc84173c87c5e~tplv-fhlh96nyum-crop-webp:1024:1024.webp?dr=12190&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=607f11de&idc=useast5&from=2378011839",
+      url: "https://vm.tiktok.com/ZP9jhg6GHo7oQ-uOTPW/"
     },
     {
-      name: "Adeline Oval Shaped Moissanite Ring",
-      details:
-        "VVS 1 Color Grade D, 18K White Gold / GRA INTERNATIONAL CERTIFICATE",
-      image:
-        "https://down-my.img.susercontent.com/file/my-11134207-7qul4-livbuo8722iu5a.webp",
-      price: "$107.17",
-      url: "https://shopee.com.my/Lore-Jewellery-Adeline-Oval-Shaped-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICATE-i.865633567.20481544902?extraParams=%7B%22display_model_id%22%3A231772960618%2C%22model_selection_logic%22%3A3%7D"
+      name: "Adeline Oval Moissanite Ring S925 1.0 CT",
+      image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/ebde91b93af443489903a0ef8710b14a~tplv-fhlh96nyum-crop-webp:800:800.webp?dr=12190&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=607f11de&idc=useast5&from=2378011839",
+      url: "https://vm.tiktok.com/ZP9jhgpJeaC8a-m2eKX/"
     },
     {
-      name: "Qiun Wave Silver Moissanite Ring",
-      details:
-        "VVS 1 Color Grade D, 18K White Gold / GRA INTERNATIONAL CERTIFICATE",
-      image:
-        "https://down-my.img.susercontent.com/file/my-11134207-7qul1-livh27h7awxyf9.webp",
-      price: "$57.67",
-      url: "https://shopee.com.my/Lore-Jewellery-Qiun-Wave-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONACERTIFICAT-i.865633567.18890517215?extraParams=%7B%22display_model_id%22%3A221774173722%2C%22model_selection_logic%22%3A3%7D"
+      name: "Quinn Wave Halo Moissanite Ring S925 1.0 CT",
+      image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/5f64628546ff4191999dac4be3bd863d~tplv-fhlh96nyum-crop-webp:1024:1024.webp?dr=12190&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=607f11de&idc=useast5&from=2378011839",
+      url: "https://vm.tiktok.com/ZP9jhpJGoH2Lb-9cfuY/"
     },
     {
-      name: "Silver Xavier Luxury Moissanite Ring",
-      details:
-        "VVS 1 Color Grade D, 18K White Gold / GRA INTERNATIONAL CERTIFICATE",
-      image:
-        "https://down-my.img.susercontent.com/file/my-11134207-7qul8-lixx5gq67h43d1.webp",
-      price: "$78.38",
-      url: "https://shopee.com.my/Lore-Jewellery-Silver-Xavier-Luxury-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.22547529020?extraParams=%7B%22display_model_id%22%3A128670435432%2C%22model_selection_logic%22%3A3%7D"
+      name: "Square Shaped Moissanite Ring S925",
+      image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/b668b6e0a32644229ffe1c5378b27d7b~tplv-fhlh96nyum-crop-webp:800:800.webp?dr=12190&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=607f11de&idc=useast5&from=2378011839",
+      url: "https://vm.tiktok.com/ZP9jhbwyv5XbE-mpKde/"
     },
     {
-      name: "Laia Simple Moissanite Ring",
-      details:
-        "0.01 Carat, VVS 1 Color Grade D, 18K White Gold / GRA INTERNATIONAL CERTIFICATE",
-      image:
-        "https://down-my.img.susercontent.com/file/my-11134207-7quky-liww02li761v50.webp",
-      price: "$32.92",
-      url: "https://shopee.com.my/Lore-Jewellery-Laia-Simple-Moissanite-Ring-0.01-Carat-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.22147482344?extraParams=%7B%22display_model_id%22%3A184412733814%2C%22model_selection_logic%22%3A3%7D"
+      name: "Mae Silver Moissanite Ring S925",
+      image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/4a0facf349234b79805837c50a4a8b86~tplv-fhlh96nyum-crop-webp:1024:1024.webp?dr=12190&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=607f11de&idc=useast5&from=2378011839",
+      url: "https://vm.tiktok.com/ZP9jhbEo5pAhR-JBAnR/"
     },
     {
-      name: "Crescent Star Silver Moissanite Ring",
-      details:
-        "0.5 Carat, VVS 1 Color Grade D, 18K White Gold / GRA INTERNATIONAL CERTIFICATE",
-      image:
-        "https://down-my.img.susercontent.com/file/my-11134207-7qukw-liwsozi2uxqe09.webp",
-      price: "$57.67",
-      url: "https://shopee.com.my/Lore-Jewellery-Crescent-Star-Silver-Moissanite-0.5-Carat-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.23672972204?extraParams=%7B%22display_model_id%22%3A158272548887%2C%22model_selection_logic%22%3A3%7D"
+      name: "Twin Stars Moissanite Ring S925",
+      image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/7604471473e94af98c6fc985e79c18c2~tplv-fhlh96nyum-crop-webp:800:800.webp?dr=12190&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=607f11de&idc=useast5&from=2378011839",
+      url: "https://vm.tiktok.com/ZP9jhg19T9qrn-8xj7Z/"
     },
     {
-      name: "Ross and Rachel Couple Ring",
-      details:
-        "VVS 1 Color Grade D, 18K White Gold / GRA INTERNATIONAL CERTIFICATE",
-      image:
-        "https://down-my.img.susercontent.com/file/my-11134201-7qukw-liwry0k6p5xi54.webp",
-      price: "$107.17",
-      url: "https://shopee.com.my/Lore-Jewellery-Ross-and-Rachel-Couple-Ring-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONAL-CERTIFICAT-i.865633567.16195233855?extraParams=%7B%22display_model_id%22%3A214412391912%2C%22model_selection_logic%22%3A3%7D"
+      name: "Britney Moissanite Ring S925",
+      image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/bcdba79dbf354456aac58dd2bac820d7~tplv-fhlh96nyum-crop-webp:1024:1024.webp?dr=12190&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=607f11de&idc=useast5&from=2378011839",
+      url: "https://vm.tiktok.com/ZP9jhgJt9UKCx-4JEPi/"
     },
     {
-      name: "Harper Round Silver Moissanite Ring",
-      details:
-        "VVS 1 Color Grade D, 18K White Gold / GRA INTERNATIONAL CERTIFICATE",
-      image:
-        "https://down-my.img.susercontent.com/file/my-11134207-7qula-liwsozi21ft21a.webp",
-      price: "$65.92",
-      url: "https://shopee.com.my/Lore-Jewellery-Harper-Round-Silver-Moissanite-VVS-1-Color-Grade-D-Ring-18K-White-Gold-GRA-INTERNATIONA-i.865633567.20390536087?extraParams=%7B%22display_model_id%22%3A186862261570%2C%22model_selection_logic%22%3A3%7D"
+      name: "Florence Moissanite Ring S925",
+      image: "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/b1187ad6312b4757b79fde3743232b60~tplv-fhlh96nyum-crop-webp:1024:1024.webp?dr=12190&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=607f11de&idc=useast5&from=2378011839",
+      url: "https://vm.tiktok.com/ZP9jhgd3WM51e-ICQxI/"
     }
   ];
 
   return (
-    <section className="py-28 bg-white">
+    <section className="py-32 bg-white">
       <div className="container mx-auto px-4">
         {/* Header spacing improved */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl font-light tracking-[0.2em] text-gray-900">
+          <h2 className={`${montserrat.className} text-2xl md:text-3xl font-light tracking-[0.2em] uppercase text-gray-900 leading-snug`}>
             Popular Collections
           </h2>
           <div className="mt-4 mx-auto w-12 h-px bg-gray-300" />
@@ -108,7 +77,7 @@ export function PopularCollections() {
 
               {/* improved text spacing */}
               <div className="absolute bottom-0 left-0 w-full px-5 py-5 text-white">
-                <p className="text-sm font-medium tracking-wide leading-snug">
+                <p className={`${montserrat.className} text-xs font-normal uppercase tracking-[0.15em] leading-snug`}>
                   {col.name}
                 </p>
               </div>
