@@ -6,6 +6,7 @@ export interface JewelryItem {
   price: number;
   image: string;
   url?: string;
+  subCategory?: string;
 }
 
 export const rings: JewelryItem[] = [

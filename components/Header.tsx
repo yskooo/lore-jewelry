@@ -56,8 +56,9 @@ export function Header() {
             </button>
 
             <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-6">
-              <div className="bg-white border border-gray-200 shadow-xl p-8 flex gap-12 min-w-[440px]">
-                {categories.map((section) => (
+              <div className="bg-white border border-gray-200 shadow-xl min-w-[440px] max-h-[75vh] overflow-y-auto custom-scrollbar">
+                <div className="p-8 flex gap-12">
+                  {categories.map((section) => (
                   <div key={section.title} className="min-w-[160px]">
                     <p
                       className={`${montserrat.className} text-xs font-bold uppercase tracking-[0.2em] text-gray-900 mb-4`}
@@ -71,16 +72,29 @@ export function Header() {
                             {group.label}
                           </p>
                           {group.items && (
-                            <ul className="space-y-2 mt-2">
+                            <ul className="space-y-3 mt-4">
                               {group.items.map((item) => (
-                                <li key={item.label}>
+                                <li key={item.label} className="space-y-2">
                                   <Link
                                     href={item.href}
-                                    className={`${raleway.className} flex items-center text-[13px] text-gray-600 hover:text-black transition-colors`}
+                                    className={`${raleway.className} flex items-center text-[14px] font-medium text-gray-700 hover:text-black transition-colors`}
                                   >
-                                    <span className="mr-2 text-gray-400">•</span>
                                     {item.label}
                                   </Link>
+                                  {item.subItems && (
+                                    <ul className="space-y-2 pl-3 ml-1 mt-2 border-l border-gray-200">
+                                      {item.subItems.map((subItem) => (
+                                        <li key={subItem.label}>
+                                          <Link
+                                            href={subItem.href}
+                                            className={`${raleway.className} flex items-center text-[13px] text-gray-500 hover:text-gray-900 transition-colors`}
+                                          >
+                                            {subItem.label}
+                                          </Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
                                 </li>
                               ))}
                             </ul>
@@ -89,7 +103,8 @@ export function Header() {
                       ))}
                     </div>
                   </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -165,17 +180,31 @@ export function Header() {
                         {group.label}
                       </p>
                       {group.items && (
-                        <ul className="space-y-3 mt-2 pl-2 border-l border-gray-100">
+                        <ul className="space-y-4 mt-3 pl-2 border-l border-gray-200">
                           {group.items.map((item) => (
-                            <li key={item.label}>
+                            <li key={item.label} className="space-y-3">
                               <Link
                                 href={item.href}
-                                className={`${raleway.className} flex items-center text-[13px] text-gray-600 hover:text-black transition-colors`}
+                                className={`${raleway.className} flex items-center text-[14px] font-medium text-gray-700 hover:text-black transition-colors`}
                                 onClick={() => setIsMobileMenuOpen(false)}
                               >
-                                <span className="mr-2 text-gray-400">•</span>
                                 {item.label}
                               </Link>
+                              {item.subItems && (
+                                <ul className="pl-3 space-y-3 border-l border-gray-200 ml-2 mt-2">
+                                  {item.subItems.map((subItem) => (
+                                    <li key={subItem.label}>
+                                      <Link
+                                        href={subItem.href}
+                                        className={`${raleway.className} flex items-center text-[13px] text-gray-500 hover:text-gray-900 transition-colors`}
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                      >
+                                        {subItem.label}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
                             </li>
                           ))}
                         </ul>
