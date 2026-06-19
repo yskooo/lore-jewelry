@@ -1,7 +1,7 @@
 import React from "react";
 import { bracelets } from "../data/products";
-import { montserrat, raleway } from "../utils/fonts";
-import { formatPriceUSD } from "../utils/currency";
+import { montserrat } from "../utils/fonts";
+import { ProductCard } from "./ProductCard";
 
 export function BraceletsShowcase() {
   const displayItems = bracelets.slice(0, 4);
@@ -29,39 +29,7 @@ export function BraceletsShowcase() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {displayItems.map((item) => (
-            <a
-              key={item.id}
-              href={item.url ?? "#"}
-              target={item.url && item.url !== "#" ? "_blank" : undefined}
-              rel={item.url && item.url !== "#" ? "noreferrer" : undefined}
-              className="group block overflow-hidden bg-white border border-gray-100"
-            >
-              {/* Image */}
-              <div className="aspect-square overflow-hidden bg-white p-4">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105 mix-blend-darken"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="px-4 pb-6 pt-5 text-center bg-gray-50/50">
-                <p className="text-[10px] uppercase tracking-[0.35em] text-slate-500 mb-3">
-                  {item.material}
-                </p>
-
-                <h3 className={`${montserrat.className} text-xs font-normal tracking-[0.15em] uppercase text-gray-700 min-h-[40px]`}>
-                  {item.name}
-                </h3>
-
-                <div className="mt-4 pt-4">
-                  <p className={`${raleway.className} text-xs font-medium tracking-widest text-gray-500`}>
-                    {formatPriceUSD(item.price)}
-                  </p>
-                </div>
-              </div>
-            </a>
+            <ProductCard key={item.id || item.name} item={item} />
           ))}
         </div>
       </div>

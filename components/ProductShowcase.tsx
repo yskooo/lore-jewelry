@@ -3,7 +3,7 @@ import { Crown } from "lucide-react";
 import React, { useState } from "react";
 import { products, newArrivals } from "../data/products";
 import { socialLinks } from "../data/site";
-import { formatPriceUSD } from "../utils/currency";
+import { ProductCard } from "./ProductCard";
 export function ProductShowcase() {
   const [activeTab, setActiveTab] = useState<"bestsellers" | "new">(
     "bestsellers"
@@ -42,12 +42,9 @@ export function ProductShowcase() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
           {" "}
           {currentItems.map((item, index) => (
-            <div key={item.id} className="group cursor-pointer relative">
-              {" "}
-              {/* Crown for Top 3 Bestsellers */}{" "}
+            <div key={item.id || item.name} className="relative group">
               {activeTab === "bestsellers" && index < 3 && (
                 <div className="absolute -top-6 left-0 z-10 hidden sm:block">
-                  {" "}
                   <Crown
                     className="w-6 h-6"
                     fill={
@@ -65,31 +62,12 @@ export function ProductShowcase() {
                           : "#8B4513"
                     }
                     strokeWidth={1.5}
-                  />{" "}
+                  />
                 </div>
-              )}{" "}
-              <div className="relative aspect-[4/3] mb-6 flex items-center justify-center p-4 overflow-hidden">
-                {" "}
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700 ease-out"
-                />{" "}
-              </div>{" "}
-              <div className="text-center">
-                {" "}
-                <h3 className="text-[11px] text-gray-500 mb-1 tracking-wider uppercase truncate px-2">
-                  {item.name}
-                </h3>{" "}
-                <p className="text-[11px] font-bold text-gray-900 mb-2 uppercase tracking-[0.15em]">
-                  {item.material}
-                </p>{" "}
-                <p className="text-[11px] text-gray-500 tracking-wider">
-                  {formatPriceUSD(item.price)}
-                </p>{" "}
-              </div>{" "}
+              )}
+              <ProductCard item={item} />
             </div>
-          ))}{" "}
+          ))}
         </div>{" "}
         {activeTab === "bestsellers" && (
           <div className="mt-16 text-center">

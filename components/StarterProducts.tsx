@@ -1,7 +1,7 @@
 import React from "react";
 import { starterProducts } from "../data/products";
-import { montserrat, raleway } from "../utils/fonts";
-import { formatPriceUSD } from "../utils/currency";
+import { montserrat } from "../utils/fonts";
+import { ProductCard } from "./ProductCard";
 
 export function StarterProducts() {
   return (
@@ -28,39 +28,7 @@ export function StarterProducts() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {starterProducts.map((item) => (
-            <a
-              key={item.name}
-              href={item.url ?? "#"}
-              target={item.url && item.url !== "#" ? "_blank" : undefined}
-              rel={item.url && item.url !== "#" ? "noreferrer" : undefined}
-              className="group block overflow-hidden bg-white"
-            >
-              {/* Image */}
-              <div className="aspect-[4/5] overflow-hidden bg-slate-100">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="px-1 pt-5">
-                <p className="text-[10px] uppercase tracking-[0.35em] text-slate-500 mb-3">
-                  {item.details}
-                </p>
-
-                <h3 className={`${montserrat.className} text-xs font-normal tracking-[0.15em] uppercase text-gray-700 min-h-[40px]`}>
-                  {item.name}
-                </h3>
-
-                <div className="mt-4 pt-4 border-t border-zinc-100">
-                  <p className={`${raleway.className} text-xs font-medium tracking-widest text-gray-500`}>
-                    {formatPriceUSD(item.price)}
-                  </p>
-                </div>
-              </div>
-            </a>
+            <ProductCard key={item.id || item.name} item={item} />
           ))}
         </div>
       </div>

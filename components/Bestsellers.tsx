@@ -1,19 +1,16 @@
 "use client";
 import React, { useMemo, useState } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
-import { earrings, rings, menRings, bands, necklaces, bracelets, artificialGemstone } from "../data/products";
+import { allProducts, JewelryItem, ProductVariant, rings, menRings, earrings, necklaces, bracelets, artificial } from "../data/products";
 import { buildBestsellersIndex } from "../utils/categorization";
-import Image from "next/image";
+import { ProductCard } from "./ProductCard";
 import { montserrat, raleway } from "../utils/fonts";
-import { formatPriceUSD } from "../utils/currency";
 
 const ITEMS_PER_PAGE = 6;
 
-const getNumericPrice = (price?: number | string | null) => {
-  if (typeof price === "number") return price;
-  if (!price) return 0;
-  const numeric = Number(price.toString().replace(/[^0-9.-]+/g, ""));
-  return Number.isFinite(numeric) ? numeric : 0;
+const getLowestVariantPrice = (item: JewelryItem): number => {
+  if (!item.variants || item.variants.length === 0) return item.price || 0;
+  return Math.min(...item.variants.map((v) => v.price));
 };
 
 export function Bestsellers() {
@@ -39,16 +36,16 @@ export function Bestsellers() {
   const categoriesMap = useMemo(() => ({
     "Ring": rings,
     "Men's Ring": menRings,
-    "Bands": bands,
+    "Bands": [],
     "Earrings": earrings,
     "Necklace": necklaces,
     "Bracelet": bracelets,
-    "Artificial": artificialGemstone
+    "Artificial": artificial
   }), []);
 
   const bestsellersIndex = useMemo(() => buildBestsellersIndex(categoriesMap), [categoriesMap]);
 
-  const allItems = useMemo(() => [...rings, ...menRings, ...bands, ...earrings, ...necklaces, ...bracelets, ...artificialGemstone], []);
+  const allItems = useMemo(() => allProducts, []);
 
   const displayedItems = useMemo(() => {
     if (activeTab === "All") return allItems;
@@ -73,12 +70,12 @@ export function Bestsellers() {
     const items = [...displayedItems];
     if (sortOrder === "lowToHigh") {
       return items.sort(
-        (a, b) => getNumericPrice(a.price) - getNumericPrice(b.price)
+        (a, b) => getLowestVariantPrice(a) - getLowestVariantPrice(b)
       );
     }
     if (sortOrder === "highToLow") {
       return items.sort(
-        (a, b) => getNumericPrice(b.price) - getNumericPrice(a.price)
+        (a, b) => getLowestVariantPrice(b) - getLowestVariantPrice(a)
       );
     }
     return items;
@@ -209,47 +206,9 @@ export function Bestsellers() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {paginatedItems.map((item, index) => {
-            const priceLabel = formatPriceUSD(item.price);
             const key = "id" in item ? item.id : `${item.name}-${index}`;
-            const materialLabel =
-              "material" in item ? item.material : "LORE | MOISSANITE";
-
             return (
-              <a
-                key={key}
-                href={item.url ?? "#"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center group cursor-pointer relative"
-              >
-                <div className="w-full aspect-4/3 sm:aspect-square max-h-80 sm:max-h-none mb-6 relative overflow-hidden bg-white">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    fill
-                    className="object-contain mix-blend-darken group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-
-                <div className="text-center mt-12 mb-7 w-full space-y-3">
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-gray-400">
-                    {materialLabel}
-                  </p>
-                  <h3
-                    className={`${montserrat.className} text-xs font-normal uppercase tracking-[0.15em] text-gray-700`}
-                  >
-                    {item.name}
-                  </h3>
-                  {priceLabel && (
-                    <p
-                      className={`${raleway.className} text-xs text-gray-500 font-medium tracking-widest`}
-                    >
-                      {priceLabel}
-                    </p>
-                  )}
-                </div>
-              </a>
+              <ProductCard key={key} item={item} />
             );
           })}
         </div>
