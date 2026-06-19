@@ -163,7 +163,7 @@ export function FooterSections() {
 
                 <li>
                   <Link
-                    href="/?tab=Ring#bestsellers"
+                    href="/?tab=Men's%20Ring#bestsellers"
                     className="hover:text-white transition-colors duration-300"
                   >
                     Men's Ring
@@ -290,11 +290,16 @@ export function FooterSections() {
                 CONTACT US
               </h4>
 
-              <p className={`${montserrat.className} text-3xl font-light tracking-[0.08em] text-white mb-4`}>
-                0917-701-6030
-              </p>
+              <a href={socialLinks.tiktok} target="_blank" rel="noreferrer" className="block ">
+                <Image
+                  src="/assets/tiktok-shop-logo.png"
+                  alt="TikTok Shop"
+                  width={100}
+                  height={100}
+                />
+              </a>
 
-              <p className={`${raleway.className} text-sm text-gray-400 mb-2`}>Monday to Friday</p>
+              <p className={`${raleway.className} text-sm text-gray-400 my-2`}>Monday to Friday</p>
 
               <p className={`${raleway.className} text-[13px] md:text-sm tracking-wide text-gray-300 leading-relaxed`}>
                 Operating Hours 9:30 - 12:00 and 13:00 - 18:30
