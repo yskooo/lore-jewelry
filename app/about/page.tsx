@@ -34,21 +34,21 @@ const features = [
   {
     title: "Our Craftsmanship",
     image:
-      "https://down-aka-my.img.susercontent.com/my-11134210-7qula-licw674tmueb4a.webp",
+      "/images/1.png",
     alt: "Lore Jewelry Craftsmanship",
     body: "We are committed to exceptional craftsmanship, combining traditional techniques with modern precision to bring you the finest moissanite jewelry."
   },
   {
     title: "Diamond vs Moissanite",
     image:
-      "https://down-aka-my.img.susercontent.com/my-11134210-23020-dj6rwb86ohnv07.webp",
+      "/images/2.png",
     alt: "Diamond vs Moissanite Comparison",
     body: "Discover the brilliant difference. Moissanite offers extraordinary fire and brilliance, often surpassing traditional diamonds while remaining a conflict-free and eco-friendly choice."
   },
   {
     title: "The Ethical Choice",
     image:
-      "https://down-aka-my.img.susercontent.com/my-11134210-7qul3-licw674to8yr55.webp",
+      "/images/3.png",
     alt: "Ethical Choice Jewelry",
     body: "Our lab-grown moissanite provides brilliant luster without the environmental impact of typical diamond mining operations. Wear with pride and a clear conscience."
   }
@@ -184,32 +184,30 @@ export default function About() {
             {features.map((item, index) => (
               <div
                 key={item.title}
-                className={`flex flex-col gap-8 md:gap-14 items-center ${
-                  index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
-                }`}
+                className={`flex flex-col gap-10 md:gap-16 lg:gap-24 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
+                  }`}
               >
-                <div className="w-full md:w-1/2">
-                  <div className="relative aspect-[4/3] overflow-hidden bg-white shadow-sm">
+                <div className="w-full md:w-[65%] lg:w-[70%]">
+                  <div className="relative aspect-[16/9] overflow-hidden bg-gray-100 group">
                     <img
                       src={item.image}
                       alt={item.alt}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                     />
                   </div>
                 </div>
-                <div className="w-full md:w-1/2 text-center md:text-left">
+                <div className="w-full md:w-[35%] lg:w-[30%] text-center md:text-left flex flex-col justify-center px-4 md:px-0">
                   <h2
-                    className={`${montserrat.className} text-xl md:text-3xl font-semibold tracking-wide text-gray-900 mb-5`}
+                    className={`${montserrat.className} text-2xl md:text-3xl lg:text-4xl font-normal tracking-wider text-gray-900 mb-6 uppercase`}
                   >
                     {item.title}
                   </h2>
                   <div
-                    className={`h-px w-12 bg-gray-300 mb-6 mx-auto ${
-                      index % 2 === 1 ? "md:ml-auto md:mr-0" : "md:mx-0"
-                    }`}
+                    className={`h-[1px] w-16 bg-gray-900 mb-8 mx-auto ${index % 2 === 1 ? "md:ml-auto md:mr-0" : "md:mx-0"
+                      }`}
                   />
                   <p
-                    className={`${raleway.className} text-gray-600 leading-relaxed tracking-wide max-w-md mx-auto md:mx-0`}
+                    className={`${raleway.className} text-gray-600 text-sm lg:text-base leading-relaxed tracking-wide max-w-md mx-auto md:mx-0`}
                   >
                     {item.body}
                   </p>
