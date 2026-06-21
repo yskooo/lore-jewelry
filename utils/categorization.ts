@@ -34,6 +34,13 @@ export function inferSubCategory(item: JewelryItem, tab: string): string | undef
     return "Other";
   }
 
+  if (tab === "Artificial") {
+    if (nameLower.includes("emerald")) {
+      return "Emerald";
+    }
+    return "Other";
+  }
+
   return undefined;
 }
 

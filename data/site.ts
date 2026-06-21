@@ -72,10 +72,10 @@ export const categories: CategorySection[] = [
         ]
       },
       {
-        label: "Alternative Gemstones",
+        label: "Artificial Jewelry",
         href: "/?tab=Artificial#bestsellers",
         items: [
-          { label: "Artificial Jewelry", href: "/?tab=Artificial#bestsellers" }
+          { label: "Emerald Jewelry", href: "/?tab=Artificial&sub=Emerald#bestsellers" }
         ]
       }
     ]

@@ -207,8 +207,15 @@ export function Bestsellers() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {paginatedItems.map((item, index) => {
             const key = "id" in item ? item.id : `${item.name}-${index}`;
+            const uniqueKey = `${activeTab}-${activeSub}-${currentPage}-${key}`;
             return (
-              <ProductCard key={key} item={item} />
+              <div 
+                key={uniqueKey}
+                className="animate-premium-fade"
+                style={{ animationDelay: `${index * 120}ms` }}
+              >
+                <ProductCard item={item} />
+              </div>
             );
           })}
         </div>

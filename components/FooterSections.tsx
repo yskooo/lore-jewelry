@@ -116,19 +116,26 @@ export function FooterSections() {
               </h4>
 
               <ul className={`${raleway.className} space-y-4 text-[13px] md:text-sm tracking-wide text-gray-400`}>
-                <li>
+                <li className="group">
                   <Link
                     href="/?tab=Ring#bestsellers"
-                    className="hover:text-white transition-colors duration-300"
+                    className="hover:text-white transition-colors duration-300 block"
                   >
                     Moissanite Rings
                   </Link>
+                  <ul className="hidden group-hover:block mt-2 pl-3 space-y-2 text-xs border-l border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-gray-500">
+                    <li><Link href="/?tab=Ring&sub=Round%20Cut#bestsellers" className="hover:text-white transition-colors block py-1">Round Cut</Link></li>
+                    <li><Link href="/?tab=Ring&sub=Oval%20Cut#bestsellers" className="hover:text-white transition-colors block py-1">Oval Cut</Link></li>
+                    <li><Link href="/?tab=Ring&sub=Emerald%20Cut#bestsellers" className="hover:text-white transition-colors block py-1">Emerald Cut</Link></li>
+                    <li><Link href="/?tab=Ring&sub=Marquise%20Cut#bestsellers" className="hover:text-white transition-colors block py-1">Marquise Cut</Link></li>
+                    <li><Link href="/?tab=Ring&sub=Pear%20Cut#bestsellers" className="hover:text-white transition-colors block py-1">Pear Cut</Link></li>
+                  </ul>
                 </li>
 
                 <li>
                   <Link
-                    href="/?tab=Ring#bestsellers"
-                    className="hover:text-white transition-colors duration-300"
+                    href="/?tab=Bands#bestsellers"
+                    className="hover:text-white transition-colors duration-300 block"
                   >
                     Moissanite Bands
                   </Link>
@@ -136,38 +143,60 @@ export function FooterSections() {
 
                 <li>
                   <Link
-                    href="/#bestsellers"
-                    className="hover:text-white transition-colors duration-300"
+                    href="/?tab=Bracelet#bestsellers"
+                    className="hover:text-white transition-colors duration-300 block"
                   >
                     Moissanite Bracelet
                   </Link>
                 </li>
 
-                <li>
+                <li className="group">
                   <Link
                     href="/?tab=Earrings#bestsellers"
-                    className="hover:text-white transition-colors duration-300"
+                    className="hover:text-white transition-colors duration-300 block"
                   >
                     Moissanite Earrings
                   </Link>
+                  <ul className="hidden group-hover:block mt-2 pl-3 space-y-2 text-xs border-l border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-gray-500">
+                    <li><Link href="/?tab=Earrings&sub=Studs#bestsellers" className="hover:text-white transition-colors block py-1">Studs</Link></li>
+                    <li><Link href="/?tab=Earrings&sub=Huggies#bestsellers" className="hover:text-white transition-colors block py-1">Huggies</Link></li>
+                    <li><Link href="/?tab=Earrings&sub=Hanging#bestsellers" className="hover:text-white transition-colors block py-1">Hanging</Link></li>
+                  </ul>
                 </li>
 
-                <li>
+                <li className="group">
                   <Link
-                    href="/#bestsellers"
-                    className="hover:text-white transition-colors duration-300"
+                    href="/?tab=Necklace#bestsellers"
+                    className="hover:text-white transition-colors duration-300 block"
                   >
                     Moissanite Necklace
                   </Link>
+                  <ul className="hidden group-hover:block mt-2 pl-3 space-y-2 text-xs border-l border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-gray-500">
+                    <li><Link href="/?tab=Necklace&sub=Round%20Cut#bestsellers" className="hover:text-white transition-colors block py-1">Round Cut</Link></li>
+                    <li><Link href="/?tab=Necklace&sub=Oval%20Cut#bestsellers" className="hover:text-white transition-colors block py-1">Oval Cut</Link></li>
+                    <li><Link href="/?tab=Necklace&sub=Emerald%20Cut#bestsellers" className="hover:text-white transition-colors block py-1">Emerald Cut</Link></li>
+                  </ul>
                 </li>
 
                 <li>
                   <Link
                     href="/?tab=Men's%20Ring#bestsellers"
-                    className="hover:text-white transition-colors duration-300"
+                    className="hover:text-white transition-colors duration-300 block"
                   >
                     Men's Ring
                   </Link>
+                </li>
+
+                <li className="group">
+                  <Link
+                    href="/?tab=Artificial#bestsellers"
+                    className="hover:text-white transition-colors duration-300 block"
+                  >
+                    Artificial Jewelry
+                  </Link>
+                  <ul className="hidden group-hover:block mt-2 pl-3 space-y-2 text-xs border-l border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-gray-500">
+                    <li><Link href="/?tab=Artificial&sub=Emerald#bestsellers" className="hover:text-white transition-colors block py-1">Emerald Jewelry</Link></li>
+                  </ul>
                 </li>
               </ul>
             </div>

@@ -25,4 +25,22 @@
     scrollbar-width: thin;
     scrollbar-color: #e5e7eb transparent;
   }
+
+  @keyframes premiumFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(16px) scale(0.98);
+      filter: blur(8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  .animate-premium-fade {
+    animation: premiumFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0; /* Keep it hidden until animation starts */
+  }
 }
