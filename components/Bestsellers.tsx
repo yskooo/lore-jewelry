@@ -1,7 +1,7 @@
 "use client";
 import React, { useMemo, useState } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
-import { allProducts, JewelryItem, ProductVariant, rings, menRings, earrings, necklaces, bracelets, artificial } from "../data/products";
+import { allProducts, JewelryItem, ProductVariant, rings, bands, menRings, earrings, necklaces, bracelets, artificial } from "../data/products";
 import { buildBestsellersIndex } from "../utils/categorization";
 import { ProductCard } from "./ProductCard";
 import { montserrat, raleway } from "../utils/fonts";
@@ -36,7 +36,7 @@ export function Bestsellers() {
   const categoriesMap = useMemo(() => ({
     "Ring": rings,
     "Men's Ring": menRings,
-    "Bands": [],
+    "Bands": bands,
     "Earrings": earrings,
     "Necklace": necklaces,
     "Bracelet": bracelets,

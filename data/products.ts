@@ -709,7 +709,10 @@ export const rings: JewelryItem[] = [
     ],
     "url": "https://vm.tiktok.com/ZP9jhp22mm374-OEsTe/",
     "image": "https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/6a19cc9f1d134d57ad1fc275bce24a02~tplv-fhlh96nyum-crop-webp:1024:1024.webp?dr=12190&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=607f11de&idc=useast5&from=2378011839"
-  },
+  }
+];
+
+export const bands: JewelryItem[] = [
   {
     "id": "LoreJ-1",
     "name": "7-Stone Moissanite Ring S925 0.77 CT - Round Cut - Lore Jewelry\r\n",
@@ -1963,7 +1966,7 @@ export const bracelets: JewelryItem[] = [
   }
 ];
 
-export const allProducts = [...rings, ...earrings, ...necklaces, ...artificial, ...menRings, ...bracelets];
+export const allProducts = [...rings, ...bands, ...earrings, ...necklaces, ...artificial, ...menRings, ...bracelets];
 
 export const products: JewelryItem[] = allProducts.slice(0, 8);
 export const newArrivals: JewelryItem[] = allProducts.slice(8, 16);
