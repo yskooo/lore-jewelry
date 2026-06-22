@@ -72,6 +72,13 @@ export const categories: CategorySection[] = [
         ]
       },
       {
+        label: "Bracelets",
+        href: "/?tab=Bracelet#bestsellers",
+        items: [
+          { label: "Moissanite Bracelets", href: "/?tab=Bracelet#bestsellers" }
+        ]
+      },
+      {
         label: "Artificial Jewelry",
         href: "/?tab=Artificial#bestsellers",
         items: [
